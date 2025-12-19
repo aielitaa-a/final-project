@@ -1,0 +1,88 @@
+.Licenses{
+    width: 1521px;
+    height: 200px;
+    background-color: rgb(237, 236, 236);
+    margin-top: -120px;
+}
+.Licenses1{
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 800;
+    color: #274C5B;
+    margin-left: 630px;
+    padding-top: 50px;
+}
+.first-lic{
+    display: flex;
+}
+.Icon-Graphics{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+    font-size: 40px;
+    padding-left: 150px;
+    padding-top: 50px;
+}
+.manually{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #525C60;
+    padding-top: 67px;
+    padding-left: 47px;
+    line-height: 2;
+}
+.Photography{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+    font-size: 40px;
+    padding-left: 150px;
+    padding-top: 50px;
+}
+.second-lic{
+    display: flex;
+}
+.All-lic{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #525C60;
+    padding-top: 170px;
+    padding-left: 100px;
+}
+.unsplash{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+    font-size: 30px;
+    padding-left: 480px;
+    margin-top: 30px;
+}
+.Image-1-lic{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #525C60;
+    padding-left: 530px;
+}
+.third-lic{
+    display: flex;
+}
+.All-lic2{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #525C60;
+    padding-top: 60px;
+    padding-left: 250px;
+}
+.Icon-Graphics2{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+    font-size: 40px;
+    padding-left: 150px;
+    margin-top: 40px;
+    /* padding-top: 50px; */
+}

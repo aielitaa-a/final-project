@@ -1,0 +1,100 @@
+.sec5 {
+    background-color: #274C5B;
+    margin-top: 10px;
+    height: 900px;
+}
+
+.off-p {
+    font-family: 'Yellowtail';
+    font-weight: 400;
+    color: #7EB693;
+    font-size: 35px;
+    margin-top: -170px;
+    padding-left: 250px;
+}
+
+.we-offer {
+    font-family: 'Roboto';
+    color: white;
+    font-weight: 800;
+    font-size: 50px;
+    margin-top: 10px;
+    padding-left: 200px;
+}
+
+.view {
+    width: 180px;
+    height: 60px;
+    background-color: #EFD372;
+    color: #274C5B;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-left: 650px;
+    margin-top: 250px;
+    margin-left: 1000px;
+}
+
+.view a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}
+
+.backened2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 100px;
+    margin-left: 170px;
+  }
+  
+  .card2 {
+    width: 300px;
+    height: 400px;
+    margin-left: -85px;
+    background: #fffefe;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category2 {
+    font-family: sans-serif;
+    font-weight: 600;
+    width: 85px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #274C5B;
+    padding-top: 5px;
+    color: #FFFFFF;
+  }
+  
+  .ava2 {
+    width: 200px;
+    height: 220px;
+  
+  }
+  
+ 
+.price22 {
+  color: #274C5B;
+  margin-top: 21px;
+  margin-left: -205px;
+}
+  
+  .name2 {
+    color: #274C5B;
+    text-align: start;
+    margin-top: 20px;
+  }
+  .star2{
+    color: #FFA858;
+    margin-left: 180px;
+    margin-top: -20px;
+  }

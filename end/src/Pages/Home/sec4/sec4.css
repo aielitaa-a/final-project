@@ -1,0 +1,117 @@
+
+.right{
+    margin-left: 782px;
+}
+.sect4 img{
+    margin-top: 100px;
+    height: 1000px;
+}
+.sect4 .customer{
+    font-family: 'Roboto';
+    font-size: 45px;
+    font-weight: 600;
+    color: #274C5B;
+    padding-left: 410px;
+    margin-top: 20px;
+}
+.sect4 .testimonial{
+    font-family: 'Yellowtail';
+    font-size: 35px;
+    font-weight: 400;
+    color: #7EB693;
+    margin-top: -800px;
+    padding-left: 630px;
+}
+.sect4 .girl{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-left: 700px;
+    margin-top: 50px;
+}
+.sect4 .stars{
+    color: #FFA858;
+    margin-left: 714px;
+    margin-top: 10px;
+}
+.sect4 .dummy{
+    color: #525C60;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-left: 15px;
+    padding-top: 30px;
+}
+.sect4 .sara{
+    color: #274C5B;
+    font-weight: 600;
+    font-family: 'Roboto';
+    text-align: center;
+    padding-left: 8px;
+    padding-top: 20px;
+}
+.sect4 .consumer{
+    color: #525C60;
+    font-weight: 400;
+    padding-left: 733px;
+}
+.sircl h1{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+}
+.organic{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 2px solid #7EB693;
+    background-color: #F1F1F1;
+    text-align: center;
+    padding-top: 43px;
+}
+.active{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 2px solid #7EB693;
+    background-color: #F1F1F1;
+    text-align: center;
+    padding-top: 43px;
+}
+.Orchads{
+    height:170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 2px solid #7EB693;
+    background-color: #F1F1F1;
+    text-align: center;
+    padding-top: 43px;
+}
+.farming{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 2px solid #7EB693;
+    background-color: #F1F1F1;
+    text-align: center;
+    padding-top: 43px;
+}
+.organic span{
+    font-size: 20px;
+}
+.active span{
+    font-size: 20px;
+}
+.Orchads span{
+    font-size: 20px;
+}
+.farming span{
+    font-size: 20px;
+}
+.sircls{
+    display: flex;
+    margin-left: 300px;
+    margin-top: 70px;
+    
+}
+

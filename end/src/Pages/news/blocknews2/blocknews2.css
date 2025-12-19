@@ -1,0 +1,68 @@
+.blockNews2{
+    margin-top: 100px;
+}
+
+.block-news{
+    display: flex;
+    margin-left: 30px;
+  }
+  .profile-news{
+    display: flex;
+    margin-left: 50px;
+    padding-top: 60px;
+    color: #EFD372;
+    font-size: 25px;
+  }
+  .rachi-news{
+    color: #274C5B;
+    padding-top: 3px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .blocks-news{
+    width: 500px;
+    height: 300px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(147, 147, 147, 0.3);;
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-top: -200px;
+
+  }
+  .benefist-news{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+    margin-top: 20px;
+    font-size: 23px;
+  }
+  .p7-news{
+    color: #525C60;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-left: 55px;
+    padding-top: 10px;
+  }
+  .load-more-news {
+    width: 180px;
+    height: 60px;
+    background-color: #EFD372;
+    color: #274C5B;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-left: 60px;
+    margin-top: 30px;
+  }
+  
+  .load-more-news a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+  }

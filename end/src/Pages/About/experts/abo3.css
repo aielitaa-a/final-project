@@ -1,0 +1,67 @@
+.abo3{
+    text-align: center;
+}
+.team-ab{
+    font-family: 'Yellowtail';
+    font-weight: 400;
+    font-size: 35px;
+    color: #7EB693;
+    padding-top: 100px;
+}
+.experts{
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 50px;
+    color: #274C5B;
+    margin-top: 10px;
+}
+.dummy-ab{
+    font-family:sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #525C60;
+    padding-top: 20px;
+}
+.experts-img {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    margin-left: 115px;
+  }
+  
+  .expert-img {
+    background: #eeeeee;
+    padding: 20px;
+    border-radius: 18px;
+    width: 400px;
+    text-align: center;
+    transition: 0.35s ease;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+  }
+  
+  .expert-img img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .expert-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .expert-img h4 {
+    font-family: 'Roboto';
+    margin-top: 10px;
+    font-size: 25px;
+    color: #274C5B;
+  }
+  
+  .expert-img p {
+    font-family: 'Yellowtail';
+    font-size: 22px;
+    color: #7EB693;
+    margin-top: 5px;
+  }
+  

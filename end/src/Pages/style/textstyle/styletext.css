@@ -1,0 +1,92 @@
+.style-text{
+    font-family: 'Roboto';
+    color: #274C5B;
+    font-weight: 800;
+    font-size: 30px;
+    padding-left: 300px;
+}
+.textstyleh1{
+    font-family: 'Roboto';
+    color: #274C5B;
+    font-weight: 800;
+    font-size: 50px;
+    padding-left: 250px;
+}
+.textstyleh2{
+    font-family: 'Roboto';
+    color: #274C5B;
+    font-weight: 800;
+    font-size: 40px;
+    padding-left: 254px;
+}
+.Paragraph-style{
+    display: flex;
+}
+.paragraph{
+    font-family: 'Roboto';
+    color: #274C5B;
+    font-weight: 800;
+    font-size: 35px;
+    padding-left: 250px;
+    margin-top: 100px;
+}
+.dummy-style{
+    font-family: sans-serif;
+    color: #525C60;
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 30px;
+    padding-top: 110px;
+}
+.ul-style{
+    font-family: sans-serif;
+    color: #525C60;
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 500px;
+    margin-top: -30px;
+    list-style-type: decimal;
+}
+.btn-style{
+    display: flex;
+}
+
+.shop-now-guid {
+    width: 150px;
+    height: 60px;
+    background-color: #274C5B;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-left: 80px;
+    margin-top: 110px;
+}
+.shop-now-guid2 {
+    width: 150px;
+    height: 60px;
+    background-color: white;
+    border: 2px solid #274C5B;
+    color:#274C5B ;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-left: 20px;
+    margin-top: 110px;
+}
+.load-more-guid {
+    width: 180px;
+    height: 60px;
+    background-color: #EFD372 ;
+    color:#274C5B ;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Roboto';
+    margin-top: 110px;
+    margin-left: 20px;
+  }

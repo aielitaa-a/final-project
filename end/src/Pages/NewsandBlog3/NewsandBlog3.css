@@ -1,0 +1,109 @@
+
+
+.leavsblog3{
+   width: 1521px;
+   height: 600px;
+   object-fit: cover;
+   position: relative;
+}
+.dateblog3{
+    display: flex;
+    font-family: 'Roboto';
+    color: #ffffff;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+.block-blog3{
+    position: absolute;
+    margin-top: -200px;
+    width: 1000px;
+    height: 300px;
+    margin-left: 240px;
+    border-radius: 40px;
+    background-color: rgba(10, 70, 11, 0.727);
+}
+.Need-to-Know{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #ffffff;
+    font-size: 40px;
+    margin-top: 10px;
+}
+.Podcasting{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+    padding-left: 50px;
+    padding-top: 15px;
+}
+.Uniquely{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #525C60;
+    padding-left: 255px;
+    padding-top: 150px;
+}
+.for-all-people{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+    font-size: 70px;
+    padding-left: 200px;
+    margin-top: 50px;
+}
+.Appropriately{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #525C60;
+    padding-left: 255px;
+    padding-top: 50px;
+}
+.blog-ul3{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #40494d;
+    padding-top: 30px;
+    padding-left: 350px;
+}
+.block-botoom-ul{
+    width: 800px;
+    height: 250px;
+    background-color: #05610098;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    padding-top: 60px;
+    padding-left: 50px;
+    margin-left: 300px;
+    margin-top: 30px;
+}
+.make-perfect{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+    font-size: 50px;
+    padding-left: 250px;
+    margin-top: 35px;
+}
+.Collaboratively{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #525C60;
+    padding-left: 305px;
+    padding-top: 20px;
+}
+.blog-ul3-2{
+    list-style-type: decimal;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #40494d;
+    padding-top: 30px;
+    padding-left: 330px;
+}

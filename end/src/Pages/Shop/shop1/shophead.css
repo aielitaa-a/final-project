@@ -1,0 +1,237 @@
+.shop-img{
+    max-width: 1521px;
+}
+.shop-text{
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 800;
+    color: #274C5B;
+    margin-left: 700px;
+    margin-top: -230px;
+}
+
+
+.backened {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 250px;
+  margin-left: 170px;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  margin-left: -85px;
+  background: #fffefe;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category {
+  font-family: sans-serif;
+  font-weight: 600;
+  width: 85px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #274C5B;
+  padding-top: 5px;
+  color: #FFFFFF;
+}
+.ava {
+  width: 190px;
+  height: 250px;
+
+}
+.name {
+  color: #274C5B;
+  text-align: start;
+  margin-top: 20px;
+}
+.price {
+  color: #274C5B;
+  margin-top: 11px;
+  margin-left: -205px;
+}
+.star{
+  color: #FFA858;
+  margin-left: 180px;
+  margin-top: -23px;
+}
+.card {
+  position: relative;
+}
+
+.add-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.add-icon:hover {
+  background: #e7e7e7;
+}
+/* Стили для модального окна с отзывами */
+.review-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.review-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.modal-product-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-product-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.modal-product-details {
+  flex: 1;
+}
+
+.modal-category {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.modal-name {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.modal-price {
+  font-size: 18px;
+  color: #7EB693;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-star {
+  display: flex;
+  color: #FFA858;
+  font-size: 18px;
+}
+
+.modal-review-section {
+  margin-bottom: 25px;
+}
+
+.modal-review-section h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.review-text {
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #7EB693;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-add-to-cart {
+  background-color: #274C5B;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-add-to-cart:hover {
+  background-color: #1a3845;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .review-modal-content {
+    padding: 20px;
+    width: 95%;
+  }
+  
+  .modal-product-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .modal-product-image {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

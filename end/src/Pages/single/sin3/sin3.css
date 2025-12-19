@@ -1,0 +1,62 @@
+.sin-farm{
+    font-family: 'Roboto';
+    font-size: 35px;
+    font-weight: 800;
+    color: #274C5B;
+    padding-left: 300px;
+}
+.established{
+    font-family: sans-serif;
+    color: #525C60;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7;
+    padding-left: 355px;
+}
+.numbers{
+    display: flex;
+}
+.sin-one{
+    width: 350px;
+    height: 70px;
+    background-color: #F9F8F8;
+    border-radius: 40px;
+    display: flex;
+    font-family: 'Roboto';
+    font-size: 45px;
+    font-weight: 800;
+    color: #7EB693;
+    padding-top: 15px;
+    padding-left: 20px;
+    margin-left: 350px;
+    margin-top: 50px;
+}
+.quality{
+    font-family: 'Roboto';
+    font-size: 26px;
+    font-weight: 800;
+    color: #274C5B;
+    padding-top: 6px;
+}
+.sin-two{
+    width: 350px;
+    height: 70px;
+    background-color: #F9F8F8;
+    border-radius: 40px;
+    display: flex;
+    font-family: 'Roboto';
+    font-size: 45px;
+    font-weight: 800;
+    color: #7EB693;
+    padding-top: 15px;
+    padding-left: 20px;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+.quality2{
+    font-family: 'Roboto';
+    font-size: 26px;
+    font-weight: 800;
+    color: #274C5B;
+    padding-top: 6px;
+}

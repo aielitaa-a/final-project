@@ -1,0 +1,114 @@
+.news-7{
+    font-family: 'Yellowtail';
+    font-weight: 400;
+    color: #7EB693;
+    font-size: 35px;
+    margin-top: 150px;
+    margin-left: 200px;
+}
+.discover{
+    font-family: 'Roboto';
+    color: #274C5B;
+    font-size: 50px;
+    font-weight: 800;
+    margin-left: 200px;
+    margin-top: -80px;
+}
+.more-newws {
+    width: 180px;
+    height: 60px;
+    color: #274C5B;
+    background-color: #ffffff;
+    border: 2px solid #274C5B;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-top: 20px;
+    margin-left: 1100px;
+  }
+  
+  .more-newws a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+  }
+  .leavs{
+    width: 600px;
+    height: 450px;
+    border-radius: 20px;
+    margin-left: 135px;
+    margin-top: 100px;
+  }
+  .tomato{
+    width: 600px;
+    height: 450px;
+    border-radius: 20px;
+    margin-left: 40px;
+  }
+  .load-more7 {
+    width: 180px;
+    height: 60px;
+    background-color: #EFD372;
+    color: #274C5B;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-left: 60px;
+    margin-top: 30px;
+  }
+  
+  .load-more7 a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+  }
+  .block-7{
+    display: flex;
+    margin-left: 30px;
+  }
+  .profile{
+    display: flex;
+    margin-left: 50px;
+    padding-top: 60px;
+    color: #EFD372;
+    font-size: 25px;
+  }
+  .rachi{
+    color: #274C5B;
+    padding-top: 3px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .blocks-7{
+    width: 500px;
+    height: 300px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(147, 147, 147, 0.3);;
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-top: -200px;
+
+  }
+  .benefist{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+    margin-top: 20px;
+    font-size: 23px;
+  }
+  .p7{
+    color: #525C60;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-left: 55px;
+    padding-top: 10px;
+  }

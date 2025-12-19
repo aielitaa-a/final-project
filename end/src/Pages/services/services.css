@@ -1,0 +1,100 @@
+.first-serv{
+    max-width: 1521px;
+}
+.serv-text{
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 800;
+    color: #274C5B;
+    margin-left: 610px;
+    margin-top: -220px;
+}
+.fistashka{
+    width: 500px;
+    margin-left: 450px;
+    margin-top: 20px;
+}
+.grow{
+    font-family: 'Yellowtail';
+    color: #7EB693;
+    font-size: 35px;
+    font-weight: 400;
+    padding-left: 620px;
+    margin-top: 350px;
+}
+.Agriculture{
+    font-family: "Roboto";
+    color: #274C5B;
+    font-size: 50px;
+    font-weight: 800;
+    margin-left: -100px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.left-serv{
+    text-align: right;
+    margin-right: 1010px;
+    margin-top: -570px;
+}
+.left-serv h4{
+    font-family: 'Roboto';
+    font-size: 25px;
+    color: #274C5B;
+    font-weight: 500;
+}
+.left-serv p{
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #525C60;
+    font-weight: 400;  
+}
+.left-serv .lserv{
+    font-size: 35px;
+    color: #7EB693;
+    padding-top: 20px;
+}
+
+.right-serv{
+    text-align: left;
+    margin-left: 900px;
+    margin-top: -460px;
+}
+.right-serv h4{
+    font-family: 'Roboto';
+    font-size: 25px;
+    color: #274C5B;
+    font-weight: 500;
+}
+.right-serv p{
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #525C60;
+    font-weight: 400;
+}
+.right-serv .rserv{
+    font-size: 30px;
+    color: #7EB693;
+    padding-top: 20px; 
+}
+
+.serv-btn {
+    width: 180px;
+    height: 60px;
+    background-color: #ffffff;
+    border: 2px solid #274C5B ;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-top: 130px;
+    margin-left: -270px;
+  }
+  
+  .serv-btn a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+  }

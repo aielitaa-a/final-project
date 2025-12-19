@@ -1,0 +1,45 @@
+
+.sect1{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+.natural{
+    width: 650px;
+    height: 370px;
+    background-image: url('../../../assets/first.jpg');
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+.offter{
+    width: 650px;
+    height: 370px;
+    background-image: url('../../../assets/secend.jpg');
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin-left: 25px;
+}
+h1{
+    font-family: 'Yellowtail';
+    font-weight: 400;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.offter h1{
+    color: #7EB693;
+}
+.natural h1{
+    color: white;
+}
+h2{
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 40px;
+    margin-left: 45px;
+}
+.natural h2{
+    color: white;
+}
+.offter h2{
+    color: #274C5B
+}

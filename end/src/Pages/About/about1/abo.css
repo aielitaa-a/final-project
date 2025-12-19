@@ -1,0 +1,96 @@
+.first-about{
+    max-width: 1521px;
+}
+.about-text{
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 800;
+    color: #274C5B;
+    margin-left: 610px;
+    margin-top: -220px;
+}
+.salad-img{
+    width: 700px;
+    margin-top: 250px;
+}
+.about-about{
+    font-family: 'Yellowtail';
+    color: #7EB693;
+    font-size: 35px;
+    font-weight: 400;
+    padding-left: 770px;
+    margin-top: -550px;
+}
+.create-things{
+    font-family: "Roboto";
+    color: #274C5B;
+    font-size: 50px;
+    font-weight: 800;
+    padding-left: 710px;
+    margin-top: 20px;
+}
+.about-p1{
+    font-family: sans-serif;
+    color: #838a8e;
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 770px;
+    padding-top: 15px;
+}
+.about-p2{
+    font-family: sans-serif;
+    color: #838a8e;
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 770px;
+    padding-top: 20px;
+}
+.ic{
+    display: flex;
+    font-size: 40px;
+    color: #7EB693;
+    margin-left: 770px;
+    padding-top: 30px;
+}
+.ic2{
+    display: flex;
+    font-size: 40px;
+    color: #7EB693;
+    margin-left: 1100px;
+    margin-top: -35px;
+}
+.agriculture{
+    font-family: 'Roboto';
+    color: #274C5B;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: -10px;
+}
+.growth{
+    font-family: 'Roboto';
+    color: #274C5B;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.btn-about {
+    width: 150px;
+    height: 60px;
+    background-color: #274C5B;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-left: 770px;
+    margin-top: 50px;
+}
+.btn-about a {
+    text-decoration: none;
+    color: inherit;             
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}

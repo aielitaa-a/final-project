@@ -1,0 +1,35 @@
+.sing-img{
+    max-width: 1521px;
+}
+.sing-text{
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 800;
+    color: #274C5B;
+    margin-left: 560px;
+    margin-top: -210px;
+}
+.sinmen{
+    width: 900px;
+    margin-left: 300px;
+    margin-top: 300px;
+}
+.sin-org{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+    font-size: 50px;
+    padding-left: 300px;
+    margin-top: 20px;
+}
+.sin-p{
+    font-family: sans-serif;
+    color: #525C60;
+    font-weight: 400;
+    font-size: 15px;
+    padding-left: 350px;
+    padding-top: 30px;
+}
+.sin-p2{
+    padding-top: 30px;
+}

@@ -1,0 +1,15 @@
+.color{
+    display: flex;
+    gap: 20px;
+    margin-left: 300px;
+    padding-top: 150px;
+}
+.color2{
+    display: flex;
+    gap: 20px;
+    margin-left: 300px;
+    padding-top: 50px;
+}
+.color-2{
+    width: 140px;
+}

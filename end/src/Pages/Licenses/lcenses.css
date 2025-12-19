@@ -1,0 +1,14 @@
+.licenses{
+    width: 1185px;
+    height: 250px;
+    background-color: #e7e7e7;
+    margin-top: -40px;
+}
+.licenses{
+    font-family: 'Roboto';
+    color: #274C5B;
+    font-size: 50px;
+    font-weight: 800;
+    padding-left: 300px;
+    padding-top: 50px;
+}

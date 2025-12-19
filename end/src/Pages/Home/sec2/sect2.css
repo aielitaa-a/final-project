@@ -1,0 +1,71 @@
+.sect2{
+    margin-top: 150px;
+    background-color: rgb(243, 243, 243);
+    margin-left: -10px;
+    width: 1523px;
+    height: 700px;
+}
+.sec2 .ph{
+    width: 550px;
+    margin-left: 80px;
+    margin-top: 80px;
+}
+.sec2 h1{
+    font-family: 'Yellowtail';
+    color: #7EB693;
+    font-weight: 400;
+    margin-top: -530px;
+    margin-left: 650px;
+}
+.sec2 h2{
+    color: #274C5B;
+    font-family: 'Roboto';
+    font-size: 50px;
+    margin-left: 650px;
+    margin-top: 10px;
+}
+.sec2 p{
+    font-size: 15px;
+    font-family:sans-serif;
+    color: #525C60;
+    margin-left: 650px;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+.blocks img{
+    margin-left: 650px;
+    width: 80px;
+    margin-top: 20px;
+}
+.blocks h3{
+    margin-left: 750px;
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 25px;
+    color: #274C5B;
+    margin-top: -85px;
+}
+.blocks p{
+    margin-top: 5px;
+    margin-left: 750px;
+}
+.shop-now {
+    width: 150px;
+    height: 60px;
+    background-color: #274C5B;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    margin-left: 650px;
+    margin-top: 30px;
+}
+.shop-now a {
+    text-decoration: none;
+    color: inherit;             
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+}

@@ -1,0 +1,93 @@
+.fruit-cont{
+  width: 450px;
+  margin-top: 230px;
+  margin-left: 180px;
+}
+.all-data{
+  display: flex;
+}
+.we-love{
+  padding-top: 130px;
+  font-family: 'Roboto';
+  color:#149945;
+  font-weight: 800;
+  font-size: 45px;
+} 
+.simply-cont{
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #525C60;
+  font-weight: 400;
+  padding-left: 55px;
+  padding-top: 20px;
+}
+
+.data-container {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-block {
+    width: 270px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #f9f9f9;
+    margin-top: 30px;
+    margin-left: 55px;
+    color: #46885e;
+  }
+  .phone-mail{
+    color: #149945;
+  }
+  .contact-block:hover {
+    border-color:#149945;
+    background: #eef4ff;
+  }
+  .form-box {
+    margin-top: -362px;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid green;
+    background: #f7faff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 550px;
+    margin-left: 685px;
+  }
+  
+  .form-box input,
+  .form-box textarea {
+    width: 500px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #04a12e;
+    font-size: 16px;
+  }
+  
+  .form-box textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  .form-box button {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background:#149945;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .form-box button:hover {
+    background: #045414;
+  }
+  

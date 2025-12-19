@@ -1,0 +1,62 @@
+.leav-cont{
+    width: 1100px;
+    margin-left: 210px;
+    margin-top: 50px;
+}
+.farm{
+    position: relative;
+}
+.loc-cont{
+    position: absolute;
+    width: 500px;
+    height: 460px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 700px;
+    margin-top: -520px;
+    border-radius:20px ;
+}
+.loc{
+    font-family: 'Yellowtail';
+    font-weight: 400;
+    font-size: 35px;
+    color: #7EB693;
+    padding-left: 60px;
+    padding-top: 30px;
+}
+.our-farms{
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: #274C5B;
+    font-size: 50px;
+    margin-top: 10px;
+}
+.Established{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #525C60;
+    padding-left: 60px;
+    padding-top: 10px;
+
+}
+.location-ic{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+.loc-ic{
+    color: #7EB693;
+    font-size: 30px;
+}
+.loc-text{
+    color: #525C60;
+    font-weight: 700;
+    font-family: sans-serif;
+    padding-top: 5px;
+}
+.loc-text span{
+    color: #525C60;
+    font-family: sans-serif;
+    font-weight: 400;
+
+}

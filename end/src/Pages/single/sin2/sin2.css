@@ -1,0 +1,66 @@
+.sin-block1{
+    display: flex;
+    gap: 20px;
+    margin-left: 350px;
+    margin-top: 50px;
+ }
+ .dirt{
+    width: 320px;
+    border-radius: 20px;
+ }
+ .sin-blok1{
+    width: 450px;
+    gap: 200px;
+    background-color: #F9F8F8;
+    border-radius: 20px;
+ }
+ .Speciality1{
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: #274C5B;
+    font-size: 25px;
+    padding-left: 50px;
+    padding-top: 50px;
+ }
+ .sed1{
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #525C60;
+    font-size: 17px;
+    padding-left: 20px;
+    padding-top: 10px;
+ }
+
+
+ .sin-block2{
+    display: flex;
+    gap: 20px;
+    margin-left: 350px;
+    margin-top: 50px;
+ }
+ .plan{
+    width: 320px;
+    border-radius: 20px;
+ }
+ .sin-blok2{
+    width: 450px;
+    gap: 200px;
+    background-color: #F9F8F8;
+    border-radius: 20px;
+ }
+ .Speciality2{
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: #274C5B;
+    font-size: 25px;
+    padding-left: 50px;
+    padding-top: 50px;
+ }
+ .sed2{
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #525C60;
+    font-size: 17px;
+    padding-left: 20px;
+    padding-top: 10px;
+ }

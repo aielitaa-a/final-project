@@ -1,0 +1,11 @@
+.first-news{
+    max-width: 1521px;
+}
+.news-text{
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 800;
+    color: #274C5B;
+    margin-left: 610px;
+    margin-top: -220px;
+}
