@@ -38,7 +38,7 @@ function Sec3() {
 
   return (
     <div className='sec3'>
-      {/* Модальное окно для отзыва */}
+
       {showReview && selectedProduct && (
         <div className="review-modal-overlay" onClick={closeReview}>
           <div className="review-modal-content" onClick={(e) => e.stopPropagation()}>
@@ -65,8 +65,8 @@ function Sec3() {
               </div>
             </div>
             <div className="modal-review-section">
-              <h4>Customer Review:</h4>
-              <p className="review-text">{selectedProduct.otzyv}</p>
+              <h4>About product:</h4>
+              <p className="review-text">{selectedProduct.description}</p>
             </div>
             <div className="modal-actions">
               <button 

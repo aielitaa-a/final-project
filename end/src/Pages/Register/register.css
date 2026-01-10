@@ -1,0 +1,119 @@
+.register-page {
+    padding: 100px 0;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 500px;
+  }
+  
+  .register-form {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    border: 2px solid #84cc9f;
+  }
+  
+  .reg-subtitle {
+    font-family: 'Yellowtail', cursive;
+    color: #7EB693;
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  .reg-title {
+    color: #274C5B;
+    font-size: 36px;
+    font-weight: 800;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+  }
+  
+  /* Стили для полей ввода */
+  .register-form input {
+    width: 100%;
+    padding: 18px 25px;
+    border-radius: 16px;
+    border: 1px solid #7EB693;
+    outline: none;
+    font-size: 16px;
+    background: #F9F8F8;
+    color: #274C5B;
+    box-sizing: border-box; /* Важно: чтобы padding не расширял инпут */
+  }
+  
+  .register-form input::placeholder {
+    color: #ababab;
+    font-style: italic;
+  }
+  
+  .reg-btn {
+    width: 100%;
+    padding: 20px;
+    background-color: #274C5B;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .reg-btn:hover {
+    background-color: #7EB693;
+  }
+  
+  .error-msg {
+    color: #d62d2d;
+    background: #fff0f0;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  
+  .toggle-auth {
+    cursor: pointer;
+    color: #274C5B;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+  
+  /* МОДАЛКА */
+  .reg-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(39, 76, 91, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+  }
+  
+  .reg-modal-content {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 400px;
+  }
+  .reg-modal-content h2{
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+  .reg-modal-content p{
+    padding-top: 20px;
+  }
+  .reg-modal-content button{
+    margin-top: 20px;
+  }

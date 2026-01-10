@@ -1,82 +1,88 @@
-import React from 'react'
-import './services.css'
-import serv from '../../assets/service.png'
-import fist from '../../assets/serv.png'
+import React from 'react';
+import './services.css';
+import servBanner from '../../assets/service.png';
+import pistachioImg from '../../assets/serv.png';
 import { LuMilk } from "react-icons/lu";
 import { HiBuildingStorefront } from "react-icons/hi2";
 import { TbTruckDelivery } from "react-icons/tb";
-
 import { ImLeaf } from "react-icons/im";
 import { PiFarmFill } from "react-icons/pi";
 import { PiCarrotFill } from "react-icons/pi";
 import { Link } from 'react-router-dom';
-
 import ServFoot from './servFoot/ServFoot';
 
 function Services() {
   return (
-    <div className="serv">
-      <div className="service">
-        <img className='first-serv' src={serv} alt="" />
-        <h1 className='serv-text'> Services </h1>
+    <div className="serv-page">
+      <div className="service-hero">
+        <img className='hero-bg' src={servBanner} alt="Banner" />
+        <h1 className='hero-title'>Services</h1>
       </div>
-      <div className="fist-img">
-        <h3 className='grow'> What we Grow </h3>
-        <h1 className='Agriculture'> Better Agriculture for
-          <br />Better Future </h1>
-        <img className='fistashka' src={fist} alt="" />
-      </div>
-      <div className="left-serv">
-        <div className="lserv">
-          <LuMilk />
-          <h4> Dairy Products </h4>
-          <p> Sed ut perspiciatis unde omnis iste natus error <br />
-            sit voluptat accusantium doloremqlaudantium. <br />
-            Sed ut perspiciatis </p>
+
+      <div className="services-container">
+        <div className="services-intro">
+          <h3 className='intro-subtitle'>What we Grow</h3>
+          <h1 className='intro-title'>Better Agriculture for <br /> Better Future</h1>
         </div>
-        <div className="lserv">
-          <HiBuildingStorefront />
-          <h4> Dairy Products </h4>
-          <p> Sed ut perspiciatis unde omnis iste natus error <br />
-            sit voluptat accusantium doloremqlaudantium. <br />
-            Sed ut perspiciatis </p>
-        </div><div className="lserv">
-          <TbTruckDelivery />
-          <h4> Dairy Products </h4>
-          <p> Sed ut perspiciatis unde omnis iste natus error <br />
-            sit voluptat accusantium doloremqlaudantium. <br />
-            Sed ut perspiciatis </p>
+
+        <div className="services-grid">
+          
+
+          <div className="side-column left-side">
+            <div className="service-card">
+              <LuMilk className="service-icon" />
+              <h4>Dairy Products</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium.</p>
+            </div>
+            <div className="service-card">
+              <HiBuildingStorefront className="service-icon" />
+              <h4>Store Services</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium.</p>
+            </div>
+            <div className="service-card">
+              <TbTruckDelivery className="service-icon" />
+              <h4>Delivery Services</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium.</p>
+            </div>
+          </div>
+
+
+          <div className="center-image-wrapper">
+            <img className='pistachio-main' src={pistachioImg} alt="Pistachios" />
+          </div>
+
+
+          <div className="side-column right-side">
+            <div className="service-card">
+              <ImLeaf className="service-icon" />
+              <h4>Agricultural Services</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium.</p>
+            </div>
+            <div className="service-card">
+              <PiFarmFill className="service-icon" />
+              <h4>Organic Products</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium.</p>
+            </div>
+            <div className="service-card">
+              <PiCarrotFill className="service-icon" />
+              <h4>Fresh Vegetables</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptat accusantium doloremqlaudantium.</p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div className="services-action">
+          <Link to='/Single' className='btn-shop-now'>
+            Shop Now ➔
+          </Link>
         </div>
       </div>
 
-      <div className="right-serv">
-        <div className="rserv">
-          <ImLeaf />
-          <h4> Dairy Products </h4>
-          <p> Sed ut perspiciatis unde omnis iste natus error <br />
-            sit voluptat accusantium doloremqlaudantium. <br />
-            Sed ut perspiciatis </p>
-        </div>
-        <div className="rserv">
-          <PiFarmFill />
-          <h4> Dairy Products </h4>
-          <p> Sed ut perspiciatis unde omnis iste natus error <br />
-            sit voluptat accusantium doloremqlaudantium. <br />
-            Sed ut perspiciatis </p>
-        </div>
-        <div className="rserv">
-          <PiCarrotFill />
-          <h4> Dairy Products </h4>
-          <p> Sed ut perspiciatis unde omnis iste natus error <br />
-            sit voluptat accusantium doloremqlaudantium. <br />
-            Sed ut perspiciatis </p>
-        </div>
-        <button className='serv-btn'>
-          <Link to='/Single'> Shop Now 🡆 </Link> </button>
-      </div>
-    <ServFoot/>
+      <ServFoot />
     </div>
-  )
+  );
 }
 
-export default Services
+export default Services;

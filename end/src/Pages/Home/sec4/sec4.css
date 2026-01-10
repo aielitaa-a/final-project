@@ -1,117 +1,126 @@
-
-.right{
-    margin-left: 782px;
-}
-.sect4 img{
-    margin-top: 100px;
-    height: 1000px;
-}
-.sect4 .customer{
-    font-family: 'Roboto';
-    font-size: 45px;
-    font-weight: 600;
-    color: #274C5B;
-    padding-left: 410px;
-    margin-top: 20px;
-}
-.sect4 .testimonial{
-    font-family: 'Yellowtail';
-    font-size: 35px;
-    font-weight: 400;
+.sec4-wrapper {
+    width: 100%;
+    padding: 100px 0;
+  }
+  
+  /* Делаем лимоны фоном всей секции */
+  .testimonial-section {
+    background-image: url('../../../assets/left.png'), url('../../../assets/right.png');
+    background-position: left center, right center;
+    background-repeat: no-repeat;
+    background-size: contain; /* Картинки будут сжиматься вместе с экраном */
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  
+  .testimonial-label {
+    font-family: 'Yellowtail', cursive;
     color: #7EB693;
-    margin-top: -800px;
-    padding-left: 630px;
-}
-.sect4 .girl{
-    width: 110px;
-    height: 110px;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .main-title {
+    font-family: 'Roboto', sans-serif;
+    color: #274C5B;
+    font-size: clamp(28px, 5vw, 45px); /* Адаптивный размер шрифта */
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+  
+  .profile-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto; /* Центрирует весь блок с девушкой */
+  }
+  
+  .avatar {
+    width: 115px;
+    height: 115px;
     border-radius: 50%;
-    margin-left: 700px;
-    margin-top: 50px;
-}
-.sect4 .stars{
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .stars {
     color: #FFA858;
-    margin-left: 714px;
-    margin-top: 10px;
-}
-.sect4 .dummy{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-text {
     color: #525C60;
     font-size: 18px;
-    font-family: sans-serif;
-    text-align: center;
-    padding-left: 15px;
-    padding-top: 30px;
-}
-.sect4 .sara{
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .author-name {
+    color: #274C5B;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .author-role {
+    color: #525C60;
+    font-size: 15px;
+  }
+  
+  /* Стили для КРУГОВ */
+  .stats-section {
+    border-top: 1px solid #ECECEC;
+    padding-top: 50px;
+  }
+  
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Чтобы круги переносились на мобилках */
+    gap: 30px;
+  }
+  
+  .circle {
+    width: 180px;
+    height: 180px;
+    border: 4px solid #7EB693;
+    border-radius: 50%;
+    background: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle h2 {
+    font-size: 35px;
+    color: #274C5B;
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  .circle span {
+    font-size: 16px;
     color: #274C5B;
     font-weight: 600;
-    font-family: 'Roboto';
-    text-align: center;
-    padding-left: 8px;
-    padding-top: 20px;
-}
-.sect4 .consumer{
-    color: #525C60;
-    font-weight: 400;
-    padding-left: 733px;
-}
-.sircl h1{
-    font-family: 'Roboto';
-    font-weight: 800;
-    color: #274C5B;
-}
-.organic{
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
-    border: 2px solid #7EB693;
-    background-color: #F1F1F1;
-    text-align: center;
-    padding-top: 43px;
-}
-.active{
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
-    border: 2px solid #7EB693;
-    background-color: #F1F1F1;
-    text-align: center;
-    padding-top: 43px;
-}
-.Orchads{
-    height:170px;
-    width: 170px;
-    border-radius: 50%;
-    border: 2px solid #7EB693;
-    background-color: #F1F1F1;
-    text-align: center;
-    padding-top: 43px;
-}
-.farming{
-    height: 170px;
-    width: 170px;
-    border-radius: 50%;
-    border: 2px solid #7EB693;
-    background-color: #F1F1F1;
-    text-align: center;
-    padding-top: 43px;
-}
-.organic span{
-    font-size: 20px;
-}
-.active span{
-    font-size: 20px;
-}
-.Orchads span{
-    font-size: 20px;
-}
-.farming span{
-    font-size: 20px;
-}
-.sircls{
-    display: flex;
-    margin-left: 300px;
-    margin-top: 70px;
+  }
+  
+  /* --- АДАПТИВ ДЛЯ ТЕЛЕФОНОВ --- */
+  @media (max-width: 768px) {
+    .testimonial-section {
+      background-image: none; /* Убираем лимоны на мобилках, чтобы не мешали тексту */
+      padding: 20px;
+    }
     
-}
-
+    .stats-container {
+      gap: 15px;
+    }
+  
+    .circle {
+      width: 140px;
+      height: 140px;
+    }
+    
+    .circle h2 { font-size: 28px; }
+  }

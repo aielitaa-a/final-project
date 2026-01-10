@@ -1,58 +1,62 @@
 import React from 'react'
 import './sec4.css'
-import left from '../../../assets/left.png'
-import right from '../../../assets/right.png'
-import girl from '../../../assets/girl.jpg'
 import { TiStarFullOutline } from "react-icons/ti";
-
-
-
 
 function Sec4() {
   return (
-    <div className='sec4'>
-      <div className="sect4">
-        <img className='left' src={left} alt="" />
-        <img className='right' src={right} alt="" />
-        <h2 className='testimonial'> Testimonial </h2>
-        <h1 className='customer'> What Our Customer Saying? </h1>
-        <img className='girl' src={girl} alt="" />
-        <div className="stars">
-          <TiStarFullOutline />
-          <TiStarFullOutline />
-          <TiStarFullOutline />
-          <TiStarFullOutline />
-          <TiStarFullOutline />
+    <div className='sec4-wrapper'>
+      {/* Верхняя часть с отзывом */}
+      <section className="testimonial-section">
+        <div className="container testimonial-container">
+          <h2 className='testimonial-label'>Testimonial</h2>
+          <h1 className='main-title'>What Our Customer Saying?</h1>
+          
+          <div className="profile-block">
+            <img className='avatar' src="/src/assets/girl.jpg" alt="Sara Taylor" />
+            <div className="stars">
+              <TiStarFullOutline /><TiStarFullOutline /><TiStarFullOutline /><TiStarFullOutline /><TiStarFullOutline />
+            </div>
+            <p className='testimonial-text'>
+              Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy 
+              text of the printing and typesetting industry. Lorem Ipsum has been.
+            </p>
+            <h3 className='author-name'>Sara Taylor</h3>
+            <p className='author-role'>Consumer</p>
+          </div>
         </div>
-        <p className='dummy'> Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy <br />
-          text of the printing and typesetting industry. Lorem Ipsum has been. </p>
-        <h3 className='sara'> Sara Taylor </h3>
-        <h5 className='consumer'> Consumer </h5>
-      </div>
-      <div className="sircls">
-        <div className="sircl">
-          <h1 className='organic'> 100% <br />
-            <span> Organic </span>
-          </h1>
+      </section>
+
+      {/* Нижняя часть с кругами */}
+      <section className="stats-section">
+        <div className="container stats-container">
+          <div className="stat-item">
+            <div className="circle">
+              <h2>100%</h2>
+              <span>Organic</span>
+            </div>
+          </div>
+          <div className="stat-item">
+            <div className="circle">
+              <h2>285</h2>
+              <span>Active Product</span>
+            </div>
+          </div>
+          <div className="stat-item">
+            <div className="circle">
+              <h2>350+</h2>
+              <span>Organic Orchads</span>
+            </div>
+          </div>
+          <div className="stat-item">
+            <div className="circle">
+              <h2>25+</h2>
+              <span>Years of Farming</span>
+            </div>
+          </div>
         </div>
-        <div className="sircl">
-          <h1 className='active'> 285 <br />
-            <span> Active Product </span>
-          </h1>
-        </div>
-        <div className="sircl">
-          <h1 className='Orchads'> 350+ <br />
-            <span> Organic Orchads </span>
-          </h1>
-        </div>
-        <div className="sircl">
-          <h1 className='farming'> 25+ <br />
-            <span> Years of Farming </span>
-          </h1>
-        </div>
-      </div>
+      </section>
     </div>
   )
 }
 
-export default Sec4
+export default Sec4;

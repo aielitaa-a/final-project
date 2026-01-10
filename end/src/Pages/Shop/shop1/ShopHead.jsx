@@ -49,7 +49,7 @@ function ShopHead() {
 
   return (
     <div className="shop1">
-      {/* Модальное окно для отзыва */}
+
       {showReview && selectedProduct && (
         <div className="review-modal-overlay" onClick={closeReview}>
           <div className="review-modal-content" onClick={(e) => e.stopPropagation()}>
@@ -76,7 +76,7 @@ function ShopHead() {
               </div>
             </div>
             <div className="modal-review-section">
-              <h4>Отзыв покупателя:</h4>
+              <h4>about product:</h4>
               <p className="review-text">{selectedProduct.otzyv}</p>
             </div>
             <div className="modal-actions">

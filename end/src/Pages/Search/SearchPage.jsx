@@ -12,20 +12,43 @@ function SearchPage() {
   const [data, setData] = useState([]);
   const [searchParams] = useSearchParams();
   const [isLoading, setIsLoading] = useState(true);
+  
   const query = searchParams.get("query")?.toLowerCase() || "";
   const { addToCart } = useContext(CartContext);
 
   async function loadAll() {
     try {
       setIsLoading(true);
-      const [shop, month] = await Promise.all([
+      const [shopResponse, monthResponse] = await Promise.all([
         axios.get(apiShop),
         axios.get(apiMonth)
       ]);
 
-      setData([...shop.data, ...month.data]); 
+      const normalizedShopData = shopResponse.data.map(item => ({
+        ...item,
+        searchName: item.price?.toString().toLowerCase() || "", 
+        searchCategory: (item.categoty || "").toLowerCase(),
+        displayName: item.price || "No Name",
+        displayCategory: item.categoty || "",
+        displayPrice: item.name || "0",
+        imageSrc: item.name || "",
+        apiType: "shop"
+      }));
+
+      const normalizedMonthData = monthResponse.data.map(item => ({
+        ...item,
+        searchName: item.price?.toString().toLowerCase() || "",
+        searchCategory: (item.category || "").toLowerCase(),
+        displayName: item.price || "No Name",
+        displayCategory: item.category || "",
+        displayPrice: item.avatar || "0",
+        imageSrc: item.name || "",
+        apiType: "month"
+      }));
+
+      setData([...normalizedShopData, ...normalizedMonthData]);
     } catch (e) {
-      console.log(e);
+      console.log("Error loading data:", e);
     } finally {
       setIsLoading(false);
     }
@@ -35,77 +58,63 @@ function SearchPage() {
     loadAll();
   }, []);
 
-  const filtered = data.filter((item) =>
-    item.name?.toLowerCase().includes(query) ||
-    item.category?.toLowerCase().includes(query) ||
-    item.avatar?.toLowerCase().includes(query)
-  );
 
-  // Проверяем, есть ли результаты поиска
-  const hasResults = filtered.length > 0;
+  const filtered = query.trim() === "" 
+    ? data 
+    : data.filter((item) => {
+        return (
+          item.searchName.includes(query) ||
+          item.searchCategory.includes(query)
+        );
+      });
+
   const hasSearchQuery = query.trim() !== "";
-  
-  // Показываем сообщение только если:
-  // 1. Данные загружены (не загружаются)
-  // 2. Был выполнен поиск (есть query)
-  // 3. Результатов нет
-  const shouldShowNoResults = !isLoading && hasSearchQuery && !hasResults;
+  const noResultsFound = hasSearchQuery && filtered.length === 0;
 
   return (
     <div className="search-page">
       <h1>
-        {hasSearchQuery ? `Search results for: "${query}"` : "Search Products"}
+        {hasSearchQuery ? `Search results for: "${query}"` : "All Products"}
       </h1>
 
       {isLoading ? (
         <div className="loading">
           <p>Loading products...</p>
         </div>
-      ) : shouldShowNoResults ? (
-        // Показываем сообщение, если товары не найдены
-        <div className="no-results">
-          <h2>Товар не найден</h2>
-          <p>К сожалению, по вашему запросу "{query}" ничего не найдено.</p>
-          <p>Попробуйте изменить поисковый запрос или посмотреть другие товары:</p>
-          <Link to="/products" className="back-to-products">
-            Вернуться к товарам
-          </Link>
-        </div>
-      ) : !hasSearchQuery ? (
-        // Показываем все товары, если поискового запроса нет
-        <div className="results">
-          {data.map((el) => (
-            <div className="card" key={el.id}>
-              <button className="add-btn" onClick={() => addToCart(el)}>
-                <IoCartOutline />
-              </button>
-
-              <Link to={`/products/${el.id}`}>
-                <img src={el.name || el.avatar} alt="" />
-              </Link>
-
-              <h3>{el.name}</h3>
-              <p>{el.category || el.avatar}</p>
-              <strong>${el.price}</strong>
-            </div>
-          ))}
+      ) : noResultsFound ? (
+        /* БЛОК: НИЧЕГО НЕ НАЙДЕНО */
+        <div className="product-not-found">
+          <img 
+            src="https://cdn-icons-png.flaticon.com/512/6134/6134065.png" 
+            alt="Not found" 
+            style={{ width: '150px', marginBottom: '20px' }} 
+          />
+          <h2>Product Not Found</h2>
+          <p>We couldn't find any results for "<strong>{query}</strong>".</p>
+          <p>Please check the spelling or try another keyword.</p>
+          <Link to="/" className="back-btn">Back to Home</Link>
         </div>
       ) : (
-        // Показываем результаты, если они есть
         <div className="results">
           {filtered.map((el) => (
-            <div className="card" key={el.id}>
+            <div className="card" key={`${el.apiType}-${el.id}`}>
               <button className="add-btn" onClick={() => addToCart(el)}>
                 <IoCartOutline />
               </button>
 
-              <Link to={`/products/${el.id}`}>
-                <img src={el.name || el.avatar} alt="" />
+              <Link to={`/products/${el.id}?api=${el.apiType}`}>
+                <img 
+                  src={el.imageSrc || "https://via.placeholder.com/150"} 
+                  alt={el.displayName} 
+                  onError={(e) => {
+                    e.target.src = "https://via.placeholder.com/150";
+                  }}
+                />
               </Link>
 
-              <h3>{el.name}</h3>
-              <p>{el.category || el.avatar}</p>
-              <strong>${el.price}</strong>
+              <h3>{el.displayName}</h3>
+              <p>{el.displayCategory}</p>
+              <strong>${el.displayPrice}</strong>
             </div>
           ))}
         </div>

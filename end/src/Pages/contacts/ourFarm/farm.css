@@ -1,62 +1,105 @@
-.leav-cont{
-    width: 1100px;
-    margin-left: 210px;
-    margin-top: 50px;
+.farm-section {
+    width: 100%;
+    max-width: 1200px; /* Ограничиваем ширину как в Фигме */
+    margin: 50px auto; /* Центрируем всю секцию */
+    min-height: 500px;
+    background-image: url('../../../assets/contleav.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px; /* Закругляем углы самой картинки-фона */
+    display: flex;
+    align-items: center; /* Центрируем карточку по вертикали */
+    padding: 40px;
 }
-.farm{
-    position: relative;
+
+.farm-container {
+    display: flex;
+    justify-content: flex-end; /* Прижимает карточку вправо */
+    width: 100%;
 }
-.loc-cont{
-    position: absolute;
-    width: 500px;
-    height: 460px;
-    background-color: rgb(255, 255, 255);
-    margin-left: 700px;
-    margin-top: -520px;
-    border-radius:20px ;
+
+.loc-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
-.loc{
-    font-family: 'Yellowtail';
+
+.loc {
+    font-family: 'Yellowtail', cursive;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 32px;
     color: #7EB693;
-    padding-left: 60px;
-    padding-top: 30px;
+    margin-bottom: 5px;
 }
-.our-farms{
-    font-family: 'Roboto';
+
+.our-farms {
+    font-family: 'Roboto', sans-serif;
     font-weight: 800;
     color: #274C5B;
-    font-size: 50px;
-    margin-top: 10px;
+    font-size: 40px;
+    margin-bottom: 15px;
 }
-.Established{
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #525C60;
-    padding-left: 60px;
-    padding-top: 10px;
 
+.established-text {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #525C60;
+    line-height: 1.5;
+    margin-bottom: 25px;
 }
-.location-ic{
+
+.location-item {
     display: flex;
-    margin-top: 30px;
-    margin-left: 60px;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
 }
-.loc-ic{
-    color: #7EB693;
-    font-size: 30px;
-}
-.loc-text{
-    color: #525C60;
-    font-weight: 700;
-    font-family: sans-serif;
-    padding-top: 5px;
-}
-.loc-text span{
-    color: #525C60;
-    font-family: sans-serif;
-    font-weight: 400;
 
+.loc-icon-bg {
+    color: #7EB693;
+    font-size: 28px;
+    padding-top: 3px;
+}
+
+.loc-text h4 {
+    color: #274C5B;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.loc-text p {
+    color: #525C60;
+    font-size: 15px;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 992px) {
+    .farm-section {
+        margin: 20px;
+        background-position: left center;
+    }
+    
+    .farm-container {
+        justify-content: center; /* На планшетах карточка по центру */
+    }
+}
+
+@media (max-width: 500px) {
+    .farm-section {
+        background-image: none; /* Убираем лист на маленьких телефонах */
+        background-color: #f1f8f4;
+        padding: 20px;
+    }
+    
+    .loc-card {
+        padding: 25px;
+    }
+    
+    .our-farms {
+        font-size: 30px;
+    }
 }

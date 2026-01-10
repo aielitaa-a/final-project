@@ -1,85 +1,114 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./header.css";
 import logo from "../../assets/Logo.png";
-import { useState, useContext } from "react";
-import { IoCartOutline } from "react-icons/io5";
-import { LuSearch } from "react-icons/lu";
+import { useState, useContext, useEffect } from "react";
+import { IoCartOutline, IoPersonOutline } from "react-icons/io5"; 
+import { LuSearch } from "react-icons/lu"; 
 import { CartContext } from "../../context/CartContext";
 
 function Header() {
   const [search, setSearch] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPagesOpen, setIsPagesOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  
   const { cartCount } = useContext(CartContext);
-
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user');
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('user'); 
+    setUser(null); 
+    navigate('/');
+  };
 
   function handleSearch(e) {
     e.preventDefault();
-
     if (!search.trim()) return;
-
     navigate(`/shop?search=${search}`);
     setSearch("");
   }
 
   return (
-    <div className="parent">
-      <div className="all">
-
-        <div className="logos">
-          <img className="logo" src={logo} alt="logo" />
+    <header className="header-parent">
+      <div className="container header-container">
+        
+        {/* Логотип */}
+        <Link to="/" className="logos">
+          <img className="logo-img" src={logo} alt="logo" />
           <h1 className="logo-text">Organic</h1>
-        </div>
+        </Link>
 
-        <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+        {/* Навигация (Центральная часть) */}
+        <nav className={`nav ${isMenuOpen ? "active" : ""}`}>
+          <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
 
           <div className="dropdown">
-            <button className="dropdown-btn" onClick={() => setIsOpen(!isOpen)}>
+            <button className="dropdown-btn" onClick={() => setIsPagesOpen(!isPagesOpen)}>
               Pages ▾
             </button>
-
-            {isOpen && (
+            {isPagesOpen && (
               <div className="dropdown-menu">
-                <Link to="/team">Our Team</Link>
-                <Link to="/single">Service-Single</Link>
-                <Link to="/services">Services</Link>
+                <Link to="/team" onClick={() => {setIsMenuOpen(false); setIsPagesOpen(false)}}>Our Team</Link>
+                <Link to="/services" onClick={() => {setIsMenuOpen(false); setIsPagesOpen(false)}}>Services</Link>
+                <Link to="/single" onClick={() => {setIsMenuOpen(false); setIsPagesOpen(false)}}>Shop Single</Link>
               </div>
             )}
           </div>
 
-          <Link to="/shop">Shop</Link>
-          <Link to="/news"> News </Link>
-          <Link to="/contacts">Contact</Link>
+          <Link to="/shop" onClick={() => setIsMenuOpen(false)}>Shop</Link>
+          <Link to="/news" onClick={() => setIsMenuOpen(false)}>News</Link>
+          <Link to="/contacts" onClick={() => setIsMenuOpen(false)}>Contact</Link>
         </nav>
 
-        <form className="search-box" onSubmit={handleSearch}>
-          <input
-            type="text"
-            placeholder="Search product..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+        {/* Правая часть (Поиск, Корзина, Юзер) */}
+        <div className="header-actions">
+          <form className="action-item-wrapper search-wrapper" onSubmit={handleSearch}>
+            <input
+              className="search-input"
+              type="text"
+              placeholder="Search..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <button type="submit" className="icon-bg green-bg search-btn">
+              <LuSearch />
+            </button>
+          </form>
 
-          <button type="submit"> <LuSearch/> </button>
-        </form>
+          <Link to="/cart" className="action-item-wrapper cart-wrapper">
+            <div className="icon-bg navy-bg">
+              <IoCartOutline />
+            </div>
+            <span className="action-text">Cart ({cartCount})</span>
+          </Link>
 
-        <div className="actions">
-          <div className="all-cout">
-            <Link to="/cart" style={{ textDecoration: "none", color: "inherit" }}>
-              <div className="cart">
-                <IoCartOutline className="cart-icon" />
+          {user ? (
+            <div className="action-item-wrapper login-wrapper" onClick={handleLogout} style={{cursor: 'pointer'}}>
+              <div className="icon-bg green-bg">
+                <IoPersonOutline />
               </div>
+              <span className="action-text">Logout ({user.name.split(' ')[0]})</span>
+            </div>
+          ) : (
+            <Link to="/register" className="action-item-wrapper login-wrapper">
+              <div className="icon-bg green-bg">
+                <IoPersonOutline />
+              </div>
+              <span className="action-text">Login</span>
             </Link>
-
-            <div className="count">Cart ({cartCount})</div>
-          </div>
+          )}
         </div>
 
       </div>
-    </div>
+    </header>
   );
 }
 

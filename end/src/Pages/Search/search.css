@@ -1,0 +1,29 @@
+.product-not-found {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.product-not-found h2 {
+    color: #274C5B;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.product-not-found p {
+    color: #525C60;
+    font-size: 18px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #274C5B;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}

@@ -1,91 +1,101 @@
-.tomatoblog6{
-    width: 1521px;
-    height: 600px;
-    object-fit: cover;
-    position: relative;
+.blog6 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.dateblog6{
+.blogg6 {
+    width: 100%;
     display: flex;
-    font-family: 'Roboto';
-    color: #ffffff;
-    font-size: 20px;
-    padding-left: 50px;
-    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
 }
-.block-blog6{
-    position: absolute;
-    margin-top: -200px;
-    width: 1000px;
-    height: 300px;
-    margin-left: 240px;
+
+.tomatoblog6 {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.block-blog6 {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #ffffff;
     border-radius: 40px;
-    background-color: rgba(197, 120, 13, 0.755);
+    padding: 40px;
+    margin-top: -100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 6px solid #e7920a; 
 }
-.Need-to-Know{
+
+
+.dateblog6 {
+    display: flex;
+    gap: 10px;
+    color: #274C5B;
     font-family: 'Roboto';
-    font-weight: 800;
-    color: #ffffff;
-    font-size: 40px;
-    margin-top: 10px;
-}
-.Podcasting{
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #ffffff;
-    padding-left: 50px;
-    padding-top: 15px;
-}
-.Uniquely{
-    font-family: sans-serif;
-    font-weight: 400;
+
     font-size: 20px;
-    color: #525C60;
-    padding-left: 255px;
-    padding-top: 150px;
+    
 }
-.for-all-people{
+
+.Need-to-Know6 {
     font-family: 'Roboto';
     font-weight: 800;
     color: #274C5B;
-    font-size: 70px;
-    padding-left: 200px;
-    margin-top: 50px;
+    font-size: 40px;
+    margin: 20px 0 10px -5px;
 }
-.Appropriately{
-    font-family: sans-serif;
-    font-weight: 400;
+
+.Podcasting6 {
+    color: #525C60;
+    line-height: 1.6;
+    margin-left: -5px;
+}
+
+.bottom-head6 {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+.Uniquely6, .Appropriately6, .Collaboratively6 {
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: #525C60;
-    padding-left: 255px;
-    padding-top: 50px;
+    line-height: 1.6;
 }
-.blog-ul6{
-    font-family: sans-serif;
+
+.for-all-people6 {
+    font-family: 'Roboto';
     font-weight: 600;
-    font-size: 20px;
-    color: #40494d;
-    padding-top: 30px;
-    padding-left: 350px;
-}
-.block-botoom-ul6{
-    width: 800px;
-    height: 250px;
-    background-color: rgba(226, 141, 23, 0.866);
-    border-radius: 30px;
-    color: white;
-    font-size: 20px;
-    padding-top: 60px;
-    padding-left: 50px;
-    margin-left: 300px;
+    color: #e7920a; 
     margin-top: 30px;
 }
-.make-perfect{
-    font-family: 'Roboto';
-    font-weight: 800;
+
+.blog-ul6, .blog-ul6-2 {
+    padding-top: 20px;
+    color: #525C60;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+.block-botoom-ul6 {
+    background-color:#e7920a;
+    border-radius: 30px;
+    padding: 40px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+.make-perfect6 {
+    font-family: "Roboto";
+    font-weight: 600;
     color: #274C5B;
-    font-size: 50px;
-    padding-left: 250px;
-    margin-top: 35px;
+    margin-top: 40px;
 }

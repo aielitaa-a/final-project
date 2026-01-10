@@ -1,91 +1,102 @@
-.tomatoblog5{
-    width: 1521px;
-    height: 600px;
-    object-fit: cover;
-    position: relative;
+/* Основной контейнер */
+.blog5 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.dateblog5{
+.blogg5 {
+    width: 100%;
     display: flex;
-    font-family: 'Roboto';
-    color: #ffffff;
-    font-size: 20px;
-    padding-left: 50px;
-    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
 }
-.block-blog5{
-    position: absolute;
-    margin-top: -200px;
-    width: 1000px;
-    height: 300px;
-    margin-left: 240px;
+
+.tomatoblog5 {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.block-blog5 {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #ffffff;
     border-radius: 40px;
-    background-color: rgba(198, 169, 3, 0.715);
+    padding: 40px;
+    margin-top: -100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 6px solid #c8a61f; 
 }
-.Need-to-Know{
+
+
+.dateblog5 {
+    display: flex;
+    gap: 10px;
+    color: #274C5B;
     font-family: 'Roboto';
-    font-weight: 800;
-    color: #ffffff;
-    font-size: 40px;
-    margin-top: 10px;
-}
-.Podcasting{
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #ffffff;
-    padding-left: 50px;
-    padding-top: 15px;
-}
-.Uniquely{
-    font-family: sans-serif;
-    font-weight: 400;
+
     font-size: 20px;
-    color: #525C60;
-    padding-left: 255px;
-    padding-top: 150px;
+    
 }
-.for-all-people{
+
+.Need-to-Know5 {
     font-family: 'Roboto';
     font-weight: 800;
     color: #274C5B;
-    font-size: 70px;
-    padding-left: 200px;
-    margin-top: 50px;
+    font-size: 40px;
+    margin: 20px 0 10px -5px;
 }
-.Appropriately{
-    font-family: sans-serif;
-    font-weight: 400;
+
+.Podcasting5 {
+    color: #525C60;
+    line-height: 1.6;
+    margin-left: -5px;
+}
+
+.bottom-head5 {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+.Uniquely5, .Appropriately5, .Collaboratively5 {
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: #525C60;
-    padding-left: 255px;
-    padding-top: 50px;
+    line-height: 1.6;
 }
-.blog-ul5{
-    font-family: sans-serif;
+
+.for-all-people5 {
+    font-family: 'Roboto';
     font-weight: 600;
-    font-size: 20px;
-    color: #40494d;
-    padding-top: 30px;
-    padding-left: 350px;
-}
-.block-botoom-ul5{
-    width: 800px;
-    height: 250px;
-    background-color: rgba(171, 146, 4, 0.715);
-    border-radius: 30px;
-    color: white;
-    font-size: 20px;
-    padding-top: 60px;
-    padding-left: 50px;
-    margin-left: 300px;
+    color: #274C5B; 
     margin-top: 30px;
 }
-.make-perfect{
-    font-family: 'Roboto';
-    font-weight: 800;
+
+.blog-ul5, .blog-ul5-2 {
+    padding-top: 20px;
+    color: #525C60;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+.block-botoom-ul5 {
+    background-color:#c8a61f82;
+    border-radius: 30px;
+    padding: 40px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+.make-perfect5 {
+    font-family: "Roboto";
+    font-weight: 600;
     color: #274C5B;
-    font-size: 50px;
-    padding-left: 250px;
-    margin-top: 35px;
+    margin-top: 40px;
 }
