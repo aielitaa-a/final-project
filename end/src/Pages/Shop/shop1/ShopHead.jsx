@@ -13,6 +13,9 @@ function ShopHead() {
   const [shop, setShop] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showReview, setShowReview] = useState(false);
+  
+  const [notification, setNotification] = useState(false);
+  
   const { addToCart } = useContext(CartContext);
 
   const [params] = useSearchParams();
@@ -41,6 +44,14 @@ function ShopHead() {
     setSelectedProduct(null);
   };
 
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    setNotification(true);
+    setTimeout(() => {
+      setNotification(false);
+    }, 2000);
+  };
+
   const filtered = shop.filter((el) =>
     el.price?.toLowerCase().includes(searchQuery)
   );
@@ -49,6 +60,29 @@ function ShopHead() {
 
   return (
     <div className="shop1">
+      
+      {/* модалка */}
+      {notification && (
+       <div style={{
+        position: 'fixed',
+        top: '50px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        backgroundColor: '#44ca44', 
+        color: 'white',
+        padding: '25px 35px',
+        borderRadius: '20px',
+        boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+        zIndex: 9999,
+        fontSize: '22px',
+        fontWeight: '500',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px'
+      }}>
+        <span> Product added to cart</span>
+      </div>
+      )}
 
       {showReview && selectedProduct && (
         <div className="review-modal-overlay" onClick={closeReview}>
@@ -83,7 +117,7 @@ function ShopHead() {
               <button 
                 className="modal-add-to-cart"
                 onClick={() => {
-                  addToCart(selectedProduct);
+                  handleAddToCart(selectedProduct);
                   closeReview();
                 }}
               >
@@ -108,7 +142,7 @@ function ShopHead() {
                   className="add-icon"
                   onClick={(e) => {
                     e.stopPropagation();
-                    addToCart(el);
+                    handleAddToCart(el); 
                   }}
                   style={{
                     position: "absolute",

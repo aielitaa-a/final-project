@@ -11,6 +11,9 @@ function Sec3() {
   const [pro, setPro] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showReview, setShowReview] = useState(false);
+  
+  const [notification, setNotification] = useState(false);
+  
   const { addToCart } = useContext(CartContext);
 
   async function Product() {
@@ -36,8 +39,39 @@ function Sec3() {
     setSelectedProduct(null);
   };
 
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    setNotification(true);
+    setTimeout(() => {
+      setNotification(false);
+    }, 2000);
+  };
+
   return (
     <div className='sec3'>
+      
+      {/* модалка */}
+      {notification && (
+        <div style={{
+          position: 'fixed',
+          top: '50px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          backgroundColor: '#44ca44', 
+          color: 'white',
+          padding: '25px 35px',
+          borderRadius: '20px',
+          boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+          zIndex: 9999,
+          fontSize: '22px',
+          fontWeight: '500',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px'
+        }}>
+          <span> Product added to cart</span>
+        </div>
+      )}
 
       {showReview && selectedProduct && (
         <div className="review-modal-overlay" onClick={closeReview}>
@@ -72,7 +106,7 @@ function Sec3() {
               <button 
                 className="modal-add-to-cart"
                 onClick={() => {
-                  addToCart(selectedProduct);
+                  handleAddToCart(selectedProduct);
                   closeReview();
                 }}
               >
@@ -95,7 +129,7 @@ function Sec3() {
                   className="add-icon"
                   onClick={(e) => {
                     e.stopPropagation();
-                    addToCart(el);
+                    handleAddToCart(el);
                   }}
                   style={{
                     position: 'absolute',
