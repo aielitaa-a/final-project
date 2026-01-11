@@ -1,47 +1,73 @@
-import React from 'react'
-import './sec7.css'
-import { Link } from 'react-router-dom'
-import leavnews from '../../../assets/leavs.png'
-import tomatnews from '../../../assets/tomatoes.png'
+import React from 'react';
+import './sec7.css';
+import { Link } from 'react-router-dom';
+import leavnews from '../../../assets/leavs.png';
+import tomatnews from '../../../assets/tomatoes.png';
 import { BsPersonFill } from "react-icons/bs";
-
-
 
 function Sec7() {
     return (
-        <div className='sec7'>
-            <div className="sect7">
-                <h3 className='news-7'> News </h3>
-                <button className='more-newws'> <Link to='/News'> More News 🡆 </Link> </button>
-                <h1 className='discover'> Discover weekly content about <br />
-                    organic food, & more </h1>
-                    <img className='leavs' src={leavnews} alt="" />
-                    <img className='tomato' src={tomatnews} alt="" />
-                <div className="block-7">
-                    <div className="blocks-7">
-                        <div className="profile">
-                        <BsPersonFill /> <p className='rachi'> By Rachi Card </p>
-                        </div>
-                        <h1 className='benefist'>  Everything You Need to Know Organik </h1>
-                        <p className='p7'> Organic farming is the only way that you still <br />
-                        experience the real world. </p>
-                            <button className='load-more7' >
-                            <Link to='/NewsandBlog3'> Load More  🡆 </Link>  </button>
+        <div className='sec7-parent'>
+            <div className="container sect7-content">
+                {/* Верхняя часть: Заголовки и кнопка */}
+                <div className="news-header">
+                    <div className="news-titles">
+                        <h3 className='news-tag'>News</h3>
+                        <h1 className='news-main-title'>
+                            Discover weekly content about <br className="desktop-br" />
+                            organic food, & more
+                        </h1>
                     </div>
-                    <div className="blocks-7">
-                        <div className="profile">
-                        <BsPersonFill /> <p className='rachi'> By Rachi Card </p>
+                    <button className='more-news-btn'>
+                        <Link to='/News'>More News 🡆</Link>
+                    </button>
+                </div>
+
+                {/* Сетка новостей */}
+                <div className="news-grid">
+                    {/* Карточка 1 */}
+                    <div className="news-card">
+                        <div className="news-image-wrapper">
+                            <img className='news-img' src={leavnews} alt="Leaves" />
                         </div>
-                        <h1 className='benefist'> Orgnic Fruits: Surprising Benefits Facts </h1>
-                        <p className='p7'> The world of nature has grown on the principles <br />
-                        of health, ecology, and care. </p>
-                            <button className='load-more7' >
-                            <Link to='/NewsandBlog4'> Load More  🡆 </Link>  </button>
+                        <div className="news-info-block">
+                            <div className="profile">
+                                <BsPersonFill /> 
+                                <span className='author-name'>By Rachi Card</span>
+                            </div>
+                            <h2 className='news-card-title'>Everything You Need to Know Organik</h2>
+                            <p className='news-card-text'>
+                                Organic farming is the only way that you still experience the real world.
+                            </p>
+                            <button className='load-more-btn'>
+                                <Link to='/NewsandBlog3'>Load More 🡆</Link>
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Карточка 2 */}
+                    <div className="news-card">
+                        <div className="news-image-wrapper">
+                            <img className='news-img' src={tomatnews} alt="Tomatoes" />
+                        </div>
+                        <div className="news-info-block">
+                            <div className="profile">
+                                <BsPersonFill /> 
+                                <span className='author-name'>By Rachi Card</span>
+                            </div>
+                            <h2 className='news-card-title'>Organic: Surprising Benefits Facts</h2>
+                            <p className='news-card-text'>
+                                The world of nature has grown on the principles of health, ecology, and care.
+                            </p>
+                            <button className='load-more-btn'>
+                                <Link to='/NewsandBlog4'>Load More 🡆</Link>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Sec7
+export default Sec7;

@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./header.css";
 import logo from "../../assets/Logo.png";
 import { useState, useContext, useEffect } from "react";
-import { IoCartOutline, IoPersonOutline } from "react-icons/io5"; 
+import { IoCartOutline, IoPersonOutline, IoMenu, IoClose } from "react-icons/io5"; 
 import { LuSearch } from "react-icons/lu"; 
 import { CartContext } from "../../context/CartContext";
 
@@ -35,6 +35,12 @@ function Header() {
     setSearch("");
   }
 
+  // Функция для закрытия меню при клике на ссылку
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsPagesOpen(false);
+  };
+
   return (
     <header className="header-parent">
       <div className="container header-container">
@@ -45,10 +51,15 @@ function Header() {
           <h1 className="logo-text">Organic</h1>
         </Link>
 
-        {/* Навигация (Центральная часть) */}
+        {/* Кнопка Бургера для мобильных устройств */}
+        <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <IoClose /> : <IoMenu />}
+        </button>
+
+        {/* Навигация */}
         <nav className={`nav ${isMenuOpen ? "active" : ""}`}>
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-          <Link to="/about" onClick={() => setIsMenuOpen(false)}>About</Link>
+          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/about" onClick={closeMenu}>About</Link>
 
           <div className="dropdown">
             <button className="dropdown-btn" onClick={() => setIsPagesOpen(!isPagesOpen)}>
@@ -56,16 +67,16 @@ function Header() {
             </button>
             {isPagesOpen && (
               <div className="dropdown-menu">
-                <Link to="/team" onClick={() => {setIsMenuOpen(false); setIsPagesOpen(false)}}>Our Team</Link>
-                <Link to="/services" onClick={() => {setIsMenuOpen(false); setIsPagesOpen(false)}}>Services</Link>
-                <Link to="/single" onClick={() => {setIsMenuOpen(false); setIsPagesOpen(false)}}>Shop Single</Link>
+                <Link to="/team" onClick={closeMenu}>Our Team</Link>
+                <Link to="/services" onClick={closeMenu}>Services</Link>
+                <Link to="/single" onClick={closeMenu}>Shop Single</Link>
               </div>
             )}
           </div>
 
-          <Link to="/shop" onClick={() => setIsMenuOpen(false)}>Shop</Link>
-          <Link to="/news" onClick={() => setIsMenuOpen(false)}>News</Link>
-          <Link to="/contacts" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+          <Link to="/shop" onClick={closeMenu}>Shop</Link>
+          <Link to="/news" onClick={closeMenu}>News</Link>
+          <Link to="/contacts" onClick={closeMenu}>Contact</Link>
         </nav>
 
         {/* Правая часть (Поиск, Корзина, Юзер) */}
@@ -83,7 +94,7 @@ function Header() {
             </button>
           </form>
 
-          <Link to="/cart" className="action-item-wrapper cart-wrapper">
+          <Link to="/cart" className="action-item-wrapper cart-wrapper" onClick={closeMenu}>
             <div className="icon-bg navy-bg">
               <IoCartOutline />
             </div>
@@ -98,7 +109,7 @@ function Header() {
               <span className="action-text">Logout ({user.name.split(' ')[0]})</span>
             </div>
           ) : (
-            <Link to="/register" className="action-item-wrapper login-wrapper">
+            <Link to="/register" className="action-item-wrapper login-wrapper" onClick={closeMenu}>
               <div className="icon-bg green-bg">
                 <IoPersonOutline />
               </div>

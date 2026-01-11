@@ -1,45 +1,101 @@
-
-.sect1{
+.sect1 {
     display: flex;
+    justify-content: center; /* Центрируем карточки */
+    flex-wrap: wrap;         /* Позволяем карточкам падать вниз на мобилках */
+    gap: 25px;               /* Удобный отступ между карточками вместо margin-left */
     margin-top: 150px;
-    margin-left: 100px;
+    padding: 0 20px;         /* Отступы по бокам, чтобы не прилипало к краю экрана */
 }
-.natural{
-    width: 650px;
+
+.natural, .offter {
+    /* Заменяем width на max-width и даем 100% ширины */
+    max-width: 650px;
+    width: 100%;
     height: 370px;
+    background-repeat: no-repeat;
+    background-size: cover;  /* Чтобы картинка всегда заполняла блок */
+    background-position: center;
+    border-radius: 30px;     /* Увеличил, как на фото */
+}
+
+.natural {
     background-image: url('../../../assets/first.jpg');
-    background-repeat: no-repeat;
-    border-radius: 20px;
 }
-.offter{
-    width: 650px;
-    height: 370px;
+
+.offter {
     background-image: url('../../../assets/secend.jpg');
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    margin-left: 25px;
+    /* margin-left больше не нужен из-за gap в родителе */
 }
-h1{
+
+/* Общие стили текста внутри карточек */
+h1 {
     font-family: 'Yellowtail';
     font-weight: 400;
     margin-top: 100px;
     margin-left: 50px;
 }
-.offter h1{
-    color: #7EB693;
-}
-.natural h1{
-    color: white;
-}
-h2{
+
+h2 {
     font-family: 'Roboto';
     font-weight: 800;
     font-size: 40px;
     margin-left: 45px;
+    line-height: 1.2;
 }
-.natural h2{
-    color: white;
+
+.offter h1 { color: #7EB693; }
+.natural h1 { color: white; }
+.natural h2 { color: white; }
+.offter h2 { color: #274C5B; }
+
+/* --- АДАПТИВНОСТЬ --- */
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .sect1 {
+        margin-top: 80px;
+        margin-left: 0; /* Убираем твой фиксированный margin-left */
+    }
+    
+    .natural, .offter {
+        max-width: 45%; /* Две в ряд, но чуть меньше */
+        height: 300px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
 }
-.offter h2{
-    color: #274C5B
+
+/* Телефоны (до 768px) */
+@media (max-width: 768px) {
+    .natural, .offter {
+        max-width: 100%; /* Карточки на всю ширину */
+        height: 250px;
+    }
+
+    h1 {
+        margin-top: 60px;
+        margin-left: 30px;
+        font-size: 24px;
+    }
+
+    h2 {
+        margin-left: 30px;
+        font-size: 28px;
+    }
+
+    h2 br {
+        display: none; /* Убираем принудительный перенос на узких экранах */
+    }
+}
+
+/* Совсем маленькие экраны */
+@media (max-width: 480px) {
+    .natural, .offter {
+        height: 200px;
+    }
+    h2 {
+        font-size: 22px;
+    }
 }

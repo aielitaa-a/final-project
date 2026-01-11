@@ -1,3 +1,4 @@
+/* --- ОСНОВНЫЕ СТИЛИ (Десктоп) --- */
 .header-parent {
   width: 100%;
   background: #ffffff;
@@ -14,15 +15,16 @@
   align-items: center; 
   justify-content: space-between;
   padding: 0 15px;
+  position: relative; /* Важно для позиционирования меню */
 }
 
 /* Логотип */
 .logos {
   display: flex;
   align-items: center;
-  margin-left: -70px;
   gap: 10px;
   text-decoration: none;
+  /* Убрали margin-left: -70px, чтобы не ломать край экрана */
 }
 
 .logo-img {
@@ -38,12 +40,21 @@
   margin: 0;
 }
 
+/* Кнопка бургера (скрыта на ПК) */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #274C5B;
+  cursor: pointer;
+  order: 2; /* Ставим после лого на мобилках */
+}
+
 /* Навигация */
 .nav {
   display: flex;
-  margin-top: 27px;
-  text-align: center;
-  margin-left: 100px;
+  align-items: center;
   gap: 35px;
 }
 
@@ -77,9 +88,10 @@
   z-index: 100;
 }
 
+/* Правая часть */
 .header-actions {
   display: flex;
-  margin-left: 80px;
+  align-items: center;
   gap: 15px;
 }
 
@@ -88,8 +100,7 @@
   align-items: center;
   gap: 12px;
   border: 1px solid #E0E0E0;
-  padding: 5px; 
-  padding-right: 18px; 
+  padding: 5px 18px 5px 5px; 
   border-radius: 33px;
   text-decoration: none;
   color: #274C5B;
@@ -114,12 +125,6 @@
   width: 120px; 
 }
 
-.search-btn {
-  border: none;
-  cursor: pointer;
-}
-
-/* Иконки */
 .icon-bg {
   width: 42px;
   height: 42px;
@@ -135,7 +140,48 @@
 .navy-bg { background: #274C5B; }
 .green-bg { background: #7EB693; }
 
-.action-text {
-  white-space: nowrap;
-  font-family: 'Roboto', sans-serif;
+/* --- АДАПТИВНОСТЬ (Медиа-запросы) --- */
+
+@media (max-width: 1024px) {
+  .nav {
+    gap: 15px;
+  }
+  .search-input {
+    width: 80px;
+  }
+}
+
+@media (max-width: 850px) {
+  .menu-toggle {
+    display: block; /* Показываем бургер */
+  }
+
+  .nav {
+    display: none; /* Скрываем стандартное меню */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    align-items: flex-start;
+  }
+
+  .nav.active {
+    display: flex; /* Показываем, когда открыто */
+  }
+
+  .action-text {
+    display: none; /* Скрываем надписи Cart/Login, оставляем иконки */
+  }
+
+  .action-item-wrapper {
+    padding-right: 5px;
+  }
+
+  .search-wrapper {
+    display: none; /* Скрываем поиск на мобилках или можно оставить только иконку */
+  }
 }
