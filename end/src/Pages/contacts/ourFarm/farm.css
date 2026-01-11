@@ -33,6 +33,7 @@
     font-size: 32px;
     color: #7EB693;
     margin-bottom: 5px;
+    margin-left: 9px;
 }
 
 .our-farms {
@@ -41,6 +42,7 @@
     color: #274C5B;
     font-size: 40px;
     margin-bottom: 15px;
+    margin-left: 5px;
 }
 
 .established-text {
@@ -49,6 +51,7 @@
     color: #525C60;
     line-height: 1.5;
     margin-bottom: 25px;
+    padding-left: 10px;
 }
 
 .location-item {

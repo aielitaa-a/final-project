@@ -155,3 +155,51 @@
         align-items: center;
     }
 }
+/* ... твой существующий код ... */
+
+.hero-title {
+    font-size: clamp(32px, 8vw, 60px); /* Шрифт будет уменьшаться сам! */
+    font-weight: 800;
+    text-align: center;
+    color: #274C5B;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1; /* Чтобы текст всегда был над картинкой */
+    margin: 0; /* Убираем отрицательный margin */
+}
+
+/* Обновленная адаптивка */
+@media (max-width: 992px) {
+    .services-grid {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .center-image-wrapper {
+        order: -1; /* Картинка фисташки на мобилках будет ПЕРЕД текстом (по желанию) */
+    }
+
+    .left-side, .right-side {
+        text-align: center;
+        align-items: center;
+        order: 0;
+    }
+
+    .intro-title {
+        font-size: 32px;
+    }
+
+    .pistachio-main {
+        max-width: 300px; /* Чтобы не занимала весь экран телефона */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-hero {
+        height: 250px; /* Уменьшаем высоту баннера на маленьких телефонах */
+    }
+    
+    .btn-shop-now {
+        width: 100%; /* Кнопка на весь экран */
+        text-align: center;
+    }
+}

@@ -16,6 +16,8 @@
   .testimonial-label {
     font-family: 'Yellowtail', cursive;
     color: #7EB693;
+    font-weight: 400;
+    margin-left: -20px;
     font-size: 36px;
     margin-bottom: 10px;
   }

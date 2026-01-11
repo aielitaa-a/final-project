@@ -1,0 +1,43 @@
+/* Базовые настройки для всего сайта */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    overflow-x: hidden; /* Чтобы сайт не шатался вправо-влево */
+    width: 100%;
+  }
+  
+  /* Универсальный контейнер для центрирования контента */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+  
+  /* Умная адаптивность: лечит все flex-блоки (Services, News и т.д.) */
+  @media (max-width: 1000px) {
+    /* Находим все блоки, которые стоят в ряд, и ставим их друг под друга */
+    .services-main-layout, 
+    .services-grid, 
+    .block-news, 
+    .flex-row {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+  
+    /* ПРИНУДИТЕЛЬНО обнуляем твои старые margin-left на мобилках */
+    .left-serv, .right-serv, .serv-text, .Agriculture, .grow, .fistashka {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-top: 20px !important;
+      width: 100% !important;
+      max-width: 400px; /* Чтобы картинки не были гигантскими */
+    }
+  
+    h1 { font-size: 28px !important; }
+  }
