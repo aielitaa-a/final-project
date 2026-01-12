@@ -82,7 +82,6 @@ function SearchPage() {
           <p>Loading products...</p>
         </div>
       ) : noResultsFound ? (
-        /* БЛОК: НИЧЕГО НЕ НАЙДЕНО */
         <div className="product-not-found">
           <img 
             src="https://cdn-icons-png.flaticon.com/512/6134/6134065.png" 

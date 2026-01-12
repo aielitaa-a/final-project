@@ -80,7 +80,6 @@
 .add-icon:hover {
   background: #e7e7e7;
 }
-/* Стили для модального окна с отзывами */
 .review-modal-overlay {
   position: fixed;
   top: 0;
@@ -218,7 +217,6 @@
   background-color: #1a3845;
 }
 
-/* Адаптивность */
 @media (max-width: 600px) {
   .review-modal-content {
     padding: 20px;

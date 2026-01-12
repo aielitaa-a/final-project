@@ -1,18 +1,18 @@
 import React from 'react'
 import './sec4.css'
 import { TiStarFullOutline } from "react-icons/ti";
+import sara from '../../../assets/girl.jpg'
 
 function Sec4() {
   return (
     <div className='sec4-wrapper'>
-      {/* Верхняя часть с отзывом */}
       <section className="testimonial-section">
         <div className="container testimonial-container">
           <h2 className='testimonial-label'>Testimonial</h2>
           <h1 className='main-title'>What Our Customer Saying?</h1>
           
           <div className="profile-block">
-            <img className='avatar' src="/src/assets/girl.jpg" alt="Sara Taylor" />
+            <img className='saras-ava' src={sara} alt="" />
             <div className="stars">
               <TiStarFullOutline /><TiStarFullOutline /><TiStarFullOutline /><TiStarFullOutline /><TiStarFullOutline />
             </div>
@@ -26,7 +26,6 @@ function Sec4() {
         </div>
       </section>
 
-      {/* Нижняя часть с кругами */}
       <section className="stats-section">
         <div className="container stats-container">
           <div className="stat-item">

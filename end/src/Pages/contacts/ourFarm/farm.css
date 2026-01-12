@@ -1,20 +1,20 @@
 .farm-section {
     width: 100%;
-    max-width: 1200px; /* Ограничиваем ширину как в Фигме */
-    margin: 50px auto; /* Центрируем всю секцию */
+    max-width: 1200px; 
+    margin: 50px auto; 
     min-height: 500px;
     background-image: url('../../../assets/contleav.png');
     background-size: cover;
     background-position: center;
-    border-radius: 30px; /* Закругляем углы самой картинки-фона */
+    border-radius: 30px; 
     display: flex;
-    align-items: center; /* Центрируем карточку по вертикали */
+    align-items: center; 
     padding: 40px;
 }
 
 .farm-container {
     display: flex;
-    justify-content: flex-end; /* Прижимает карточку вправо */
+    justify-content: flex-end; 
     width: 100%;
 }
 
@@ -79,7 +79,6 @@
     font-size: 15px;
 }
 
-/* АДАПТИВНОСТЬ */
 @media (max-width: 992px) {
     .farm-section {
         margin: 20px;
@@ -87,13 +86,13 @@
     }
     
     .farm-container {
-        justify-content: center; /* На планшетах карточка по центру */
+        justify-content: center; 
     }
 }
 
 @media (max-width: 500px) {
     .farm-section {
-        background-image: none; /* Убираем лист на маленьких телефонах */
+        background-image: none; 
         background-color: #f1f8f4;
         padding: 20px;
     }

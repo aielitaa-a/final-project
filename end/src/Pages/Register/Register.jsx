@@ -3,34 +3,30 @@ import { useNavigate } from 'react-router-dom';
 import './register.css';
 
 function Register() {
-  const [isLoginMode, setIsLoginMode] = useState(false); // Переключатель режимов
+  const [isLoginMode, setIsLoginMode] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(''); // Для вывода ошибок
+  const [error, setError] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
-  
+
   const navigate = useNavigate();
 
   const handleAuth = (e) => {
     e.preventDefault();
-    setError(''); // Сбрасываем старые ошибки
+    setError('');
 
     if (!isLoginMode) {
-      // ЛОГИКА РЕГИСТРАЦИИ
       const newUser = { name, email, password };
       localStorage.setItem('user', JSON.stringify(newUser));
       setShowSuccess(true);
     } else {
-      // ЛОГИКА ВХОДА
       const savedUser = JSON.parse(localStorage.getItem('user'));
 
       if (savedUser && savedUser.email === email && savedUser.password === password) {
-        // Успешный вход
         navigate('/');
-        window.location.reload(); 
+        window.location.reload();
       } else {
-        // Ошибка валидации
         setError('Invalid email or password. Please try again!');
       }
     }
@@ -48,33 +44,33 @@ function Register() {
         <form className="register-form" onSubmit={handleAuth}>
           <h3 className="reg-subtitle">Join us</h3>
           <h1 className="reg-title">{isLoginMode ? 'Login' : 'Create Account'}</h1>
-          
+
           {error && <p className="error-msg">{error}</p>}
 
           {!isLoginMode && (
-            <input 
-              type="text" 
-              placeholder="Full Name" 
-              required 
-              value={name} 
-              onChange={(e) => setName(e.target.value)} 
+            <input
+              type="text"
+              placeholder="Full Name"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           )}
-          
-          <input 
-            type="email" 
-            placeholder="Email Address" 
-            required 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          
-          <input 
-            type="password" 
-            placeholder="Password" 
-            required 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
+
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
 
           <button type="submit" className="reg-btn">

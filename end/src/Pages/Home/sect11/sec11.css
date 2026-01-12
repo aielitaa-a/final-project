@@ -4,7 +4,7 @@
     height: 800px;
     background-image: url('../../../assets/fon.png');
     background-size: cover;
-    background-position: center; /* Добавил, чтобы фон не смещался */
+    background-position: center;
     margin-top: -100px;
 }
 
@@ -23,7 +23,7 @@
     font-size: 65px;
     margin-left: 145px;
     margin-top: 15px;
-    line-height: 1.1; /* Добавил для красоты межстрочный интервал */
+    line-height: 1.1;
 }
 
 .btn {
@@ -43,34 +43,32 @@
 
 .btn a {
     text-decoration: none;
-    color: inherit;              
+    color: inherit;
     font-size: inherit;
     font-weight: inherit;
     font-family: inherit;
 }
 
-/* --- АДАПТИВНОСТЬ --- */
-
-/* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
     .natural-text {
         padding-left: 50px;
         font-size: 28px;
     }
+
     .choose {
         margin-left: 50px;
         font-size: 50px;
     }
+
     .btn {
         margin-left: 50px;
     }
 }
 
-/* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
     .second-parent {
-        height: 600px; /* Уменьшаем высоту на мобилках */
-        margin-top: 0; /* Убираем наезд на хедер, если он мешает */
+        height: 600px;
+        margin-top: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -91,7 +89,7 @@
     }
 
     .choose br {
-        display: none; 
+        display: none;
     }
 
     .btn {
@@ -104,6 +102,7 @@
     .choose {
         font-size: 28px;
     }
+
     .second-parent {
         height: 500px;
     }

@@ -1,21 +1,20 @@
 .sect1 {
     display: flex;
-    justify-content: center; /* Центрируем карточки */
-    flex-wrap: wrap;         /* Позволяем карточкам падать вниз на мобилках */
-    gap: 25px;               /* Удобный отступ между карточками вместо margin-left */
+    justify-content: center; 
+    flex-wrap: wrap;         
+    gap: 25px;              
     margin-top: 150px;
-    padding: 0 20px;         /* Отступы по бокам, чтобы не прилипало к краю экрана */
+    padding: 0 20px;       
 }
 
 .natural, .offter {
-    /* Заменяем width на max-width и даем 100% ширины */
     max-width: 650px;
     width: 100%;
     height: 370px;
     background-repeat: no-repeat;
-    background-size: cover;  /* Чтобы картинка всегда заполняла блок */
+    background-size: cover; 
     background-position: center;
-    border-radius: 30px;     /* Увеличил, как на фото */
+    border-radius: 30px;   
 }
 
 .natural {
@@ -24,10 +23,9 @@
 
 .offter {
     background-image: url('../../../assets/secend.jpg');
-    /* margin-left больше не нужен из-за gap в родителе */
 }
 
-/* Общие стили текста внутри карточек */
+
 h1 {
     font-family: 'Yellowtail';
     font-weight: 400;
@@ -48,17 +46,17 @@ h2 {
 .natural h2 { color: white; }
 .offter h2 { color: #274C5B; }
 
-/* --- АДАПТИВНОСТЬ --- */
 
-/* Планшеты (до 1024px) */
+
+
 @media (max-width: 1024px) {
     .sect1 {
         margin-top: 80px;
-        margin-left: 0; /* Убираем твой фиксированный margin-left */
+        margin-left: 0; 
     }
     
     .natural, .offter {
-        max-width: 45%; /* Две в ряд, но чуть меньше */
+        max-width: 45%; 
         height: 300px;
     }
 
@@ -67,10 +65,9 @@ h2 {
     }
 }
 
-/* Телефоны (до 768px) */
 @media (max-width: 768px) {
     .natural, .offter {
-        max-width: 100%; /* Карточки на всю ширину */
+        max-width: 100%; 
         height: 250px;
     }
 
@@ -86,11 +83,10 @@ h2 {
     }
 
     h2 br {
-        display: none; /* Убираем принудительный перенос на узких экранах */
+        display: none; 
     }
 }
 
-/* Совсем маленькие экраны */
 @media (max-width: 480px) {
     .natural, .offter {
         height: 200px;

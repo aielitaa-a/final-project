@@ -1,4 +1,3 @@
-/* Основной контейнер */
 .sec7-parent {
   width: 100%;
   padding: 100px 0;
@@ -11,7 +10,6 @@
   padding: 0 20px;
 }
 
-/* Шапка блока */
 .news-header {
   display: flex;
   justify-content: space-between;
@@ -53,12 +51,11 @@
   color: #274C5B;
 }
 
-/* Сетка карточек */
 .news-grid {
   display: flex;
   gap: 40px;
   justify-content: center;
-  flex-wrap: wrap; /* Для перехода на новую строку на мобильных */
+  flex-wrap: wrap;
 }
 
 .news-card {
@@ -81,10 +78,9 @@
   object-fit: cover;
 }
 
-/* Белый всплывающий блок */
 .news-info-block {
   width: 90%;
-  margin: -100px auto 0; /* Наезд на картинку */
+  margin: -100px auto 0;
   background: #ffffff;
   padding: 40px;
   border-radius: 30px;
@@ -140,39 +136,38 @@
   color: #274C5B;
 }
 
-/* --- АДАПТИВНОСТЬ --- */
 
 @media (max-width: 992px) {
   .news-header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
-  
+
   .news-main-title {
-      font-size: 36px;
+    font-size: 36px;
   }
 
   .news-image-wrapper {
-      height: 350px;
+    height: 350px;
   }
 }
 
 @media (max-width: 768px) {
   .news-main-title {
-      font-size: 28px;
+    font-size: 28px;
   }
-  
+
   .desktop-br {
-      display: none;
+    display: none;
   }
 
   .news-info-block {
-      padding: 25px;
-      margin-top: -60px; 
+    padding: 25px;
+    margin-top: -60px;
   }
 
   .news-card-title {
-      font-size: 20px;
+    font-size: 20px;
   }
 }

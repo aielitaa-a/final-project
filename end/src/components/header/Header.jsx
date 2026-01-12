@@ -35,7 +35,6 @@ function Header() {
     setSearch("");
   }
 
-  // Функция для закрытия меню при клике на ссылку
   const closeMenu = () => {
     setIsMenuOpen(false);
     setIsPagesOpen(false);
@@ -51,12 +50,10 @@ function Header() {
           <h1 className="logo-text">Organic</h1>
         </Link>
 
-        {/* Кнопка Бургера для мобильных устройств */}
         <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <IoClose /> : <IoMenu />}
         </button>
 
-        {/* Навигация */}
         <nav className={`nav ${isMenuOpen ? "active" : ""}`}>
           <Link to="/" onClick={closeMenu}>Home</Link>
           <Link to="/about" onClick={closeMenu}>About</Link>
@@ -79,7 +76,6 @@ function Header() {
           <Link to="/contacts" onClick={closeMenu}>Contact</Link>
         </nav>
 
-        {/* Правая часть (Поиск, Корзина, Юзер) */}
         <div className="header-actions">
           <form className="action-item-wrapper search-wrapper" onSubmit={handleSearch}>
             <input

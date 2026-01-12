@@ -1,10 +1,11 @@
-.img8{
+.img8 {
     width: 1300px;
     border-radius: 30px;
     margin-top: 150px;
     margin-left: 105px;
 }
-.hope{
+
+.hope {
     font-family: 'Roboto';
     color: white;
     margin-top: -180px;
@@ -13,7 +14,8 @@
     margin-left: -20px;
     text-align: center;
 }
-.contact8{
+
+.contact8 {
     font-family: 'Roboto';
     font-size: 30px;
     color: #274C5B;
@@ -21,7 +23,8 @@
     margin-top: -30px;
     margin-left: 165px;
 }
-.email{
+
+.email {
     color: #525C60;
     font-family: sans-serif;
     font-size: 18px;
@@ -29,7 +32,8 @@
     margin-left: 170px;
     margin-top: 20px;
 }
-.email span{
+
+.email span {
     color: #227b9d;
     font-family: sans-serif;
     font-size: 18px;
@@ -37,14 +41,17 @@
     text-decoration: none;
 
 }
+
 .email a {
-    color: inherit; /* Наследует цвет от родителя */
-    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit;
+    text-decoration: none;
 }
+
 .email a:hover {
-    text-decoration: underline; /* Добавляет подчеркивание при наведении (опционально) */
+    text-decoration: underline;
 }
-.phonee{
+
+.phonee {
     color: #525C60;
     font-family: sans-serif;
     font-size: 18px;
@@ -52,20 +59,24 @@
     margin-top: 50px;
     margin-left: 170px;
 }
-.phonee span{
+
+.phonee span {
     color: #525C60;
     font-family: sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
+
 .phonee a {
     color: inherit;
     text-decoration: none;
 }
+
 .phonee a:hover {
     text-decoration: underline;
 }
-.adresss{
+
+.adresss {
     color: #525C60;
     font-family: sans-serif;
     font-size: 18px;
@@ -73,25 +84,30 @@
     margin-top: 50px;
     margin-left: 170px;
 }
-.adresss span{
+
+.adresss span {
     color: #525C60;
     font-family: sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
+
 .adresss a {
     color: inherit;
     text-decoration: none;
 }
+
 .adresss a:hover {
     text-decoration: underline;
 }
-.foot-logo-img{
+
+.foot-logo-img {
     width: 35px;
     margin-top: 110px;
     margin-left: 640px;
 }
-.logo-foot{
+
+.logo-foot {
     font-family: "Roboto";
     font-size: 35px;
     font-weight: 700;
@@ -99,7 +115,8 @@
     margin-top: -53px;
     margin-left: 680px;
 }
-.ul-foot{
+
+.ul-foot {
     color: #525C60;
     font-family: sans-serif;
     font-size: 18px;
@@ -110,17 +127,21 @@
     text-align: end;
     margin-top: -200px;
 }
+
 .ul-foot a {
     color: inherit;
     text-decoration: none;
 }
+
 .ul-foot a:hover {
     text-decoration: underline;
 }
-.dummy-foot{
+
+.dummy-foot {
     padding-top: 100px;
 }
-.Utility-Pages{
+
+.Utility-Pages {
     font-family: 'Roboto';
     font-size: 30px;
     color: #274C5B;

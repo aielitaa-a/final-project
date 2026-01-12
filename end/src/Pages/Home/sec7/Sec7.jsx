@@ -9,7 +9,6 @@ function Sec7() {
     return (
         <div className='sec7-parent'>
             <div className="container sect7-content">
-                {/* Верхняя часть: Заголовки и кнопка */}
                 <div className="news-header">
                     <div className="news-titles">
                         <h3 className='news-tag'>News</h3>
@@ -23,16 +22,14 @@ function Sec7() {
                     </button>
                 </div>
 
-                {/* Сетка новостей */}
                 <div className="news-grid">
-                    {/* Карточка 1 */}
                     <div className="news-card">
                         <div className="news-image-wrapper">
                             <img className='news-img' src={leavnews} alt="Leaves" />
                         </div>
                         <div className="news-info-block">
                             <div className="profile">
-                                <BsPersonFill /> 
+                                <BsPersonFill />
                                 <span className='author-name'>By Rachi Card</span>
                             </div>
                             <h2 className='news-card-title'>Everything You Need to Know Organik</h2>
@@ -45,14 +42,13 @@ function Sec7() {
                         </div>
                     </div>
 
-                    {/* Карточка 2 */}
                     <div className="news-card">
                         <div className="news-image-wrapper">
                             <img className='news-img' src={tomatnews} alt="Tomatoes" />
                         </div>
                         <div className="news-info-block">
                             <div className="profile">
-                                <BsPersonFill /> 
+                                <BsPersonFill />
                                 <span className='author-name'>By Rachi Card</span>
                             </div>
                             <h2 className='news-card-title'>Organic: Surprising Benefits Facts</h2>

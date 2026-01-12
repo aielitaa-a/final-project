@@ -1,87 +1,83 @@
 .sec6-container {
-    width: 100%;
-    min-height: 750px;
-    /* Устанавливаем фото полем как фон */
-    background-image: url('../../../assets/fields.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center; /* Центрирует белую карточку по вертикали */
-    margin-top: 50px;
-  }
-  
-  /* Белая карточка */
+  width: 100%;
+  min-height: 750px;
+  background-image: url('../../../assets/fields.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.econis-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 550px;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-left: auto;
+}
+
+.friendly {
+  font-family: 'Yellowtail';
+  font-weight: 400;
+  color: #7EB693;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.econis-store {
+  font-size: clamp(30px, 4vw, 50px);
+  font-family: 'Roboto', sans-serif;
+  color: #274C5B;
+  font-weight: 800;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  line-height: 1.2;
+}
+
+.eco-item {
+  margin-bottom: 25px;
+}
+
+.start-company {
+  color: #274C5B;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.sed {
+  color: #525C60;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 1024px) {
   .econis-card {
-    background-color: #ffffff;
-    width: 100%;
-    max-width: 550px; /* Ограничиваем ширину */
-    padding: 50px;
-    border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    /* Вместо margin-left: 600px используем это: */
-    margin-left: auto; /* Прижимает карточку к правой стороне контейнера */
+    margin: 0 auto;
+    padding: 40px;
   }
-  
-  .friendly {
-    font-family: 'Yellowtail';
-    font-weight: 400;
-    color: #7EB693;
-    font-size: 35px;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .sec6-container {
+    min-height: auto;
+    padding: 40px 20px;
+    background-image: none;
+    background-color: #f1f1f1;
   }
-  
+
+  .econis-card {
+    max-width: 100%;
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
   .econis-store {
-    font-size: clamp(30px, 4vw, 50px); /* Шрифт уменьшится на маленьких экранах */
-    font-family: 'Roboto', sans-serif;
-    color: #274C5B;
-    font-weight: 800;
-    margin-bottom: 30px;
-    margin-left: 5px;
-    line-height: 1.2;
+    font-size: 28px;
   }
-  
-  .eco-item {
-    margin-bottom: 25px;
-  }
-  
-  .start-company {
-    color: #274C5B;
-    font-weight: 600;
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-  
-  .sed {
-    color: #525C60;
-    font-size: 18px;
-    line-height: 1.5;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* --- АДАПТИВ ДЛЯ ПЛАНШЕТОВ И ТЕЛЕФОНОВ --- */
-  @media (max-width: 1024px) {
-    .econis-card {
-      margin: 0 auto; /* На планшетах карточка становится по центру */
-      padding: 40px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .sec6-container {
-      min-height: auto;
-      padding: 40px 20px;
-      background-image: none; /* Убираем тяжелое фото на мобилках */
-      background-color: #f1f1f1;
-    }
-  
-    .econis-card {
-      max-width: 100%;
-      padding: 30px 20px;
-      border-radius: 20px;
-    }
-  
-    .econis-store {
-      font-size: 28px;
-    }
-  }
+}
