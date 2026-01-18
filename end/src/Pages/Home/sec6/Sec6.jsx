@@ -4,7 +4,7 @@ import './sec6.css';
 function Sec6() {
   return (
     <section className='sec6-container'>
-      <div className="container"> {/* Используем общий контейнер для центрирования */}
+      <div className="container"> 
         <div className="econis-card">
           <h3 className='friendly'>Eco Friendly</h3>
           <h2 className='econis-store'>

@@ -1,67 +1,130 @@
-.abo3{
-    text-align: center;
+.about3 {
+  padding: 80px 0;
+  background-color: #ffffff;
+  margin-top: 50px;
 }
-.team-ab{
-    font-family: 'Yellowtail';
-    font-weight: 400;
-    font-size: 35px;
-    color: #7EB693;
-    padding-top: 100px;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-.experts{
-    font-family: 'Roboto';
-    font-weight: 800;
-    font-size: 50px;
-    color: #274C5B;
-    margin-top: 10px;
+
+.abo3-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 50px;
 }
-.dummy-ab{
-    font-family:sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #525C60;
-    padding-top: 20px;
+
+.team-ab {
+  font-family: 'Yellowtail', cursive;
+  font-weight: 400;
+  font-size: 35px;
+  color: #7EB693;
 }
-.experts-img {
-    display: flex;
-    gap: 40px;
-    margin-top: 40px;
-    margin-left: 115px;
+
+.experts {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  color: #274C5B;
+  margin: 10px 0;
+}
+
+.dummy-ab {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #525C60;
+  line-height: 1.5;
+}
+
+.experts-grid {
+  display: flex;
+  gap: 40px;
+}
+
+.expert-card {
+  background: #dadada13;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 380px;
+  transition: all 0.3s ease;
+  box-shadow: 20px 10px 30px rgba(10, 10, 10, 0.05);
+}
+
+.expert-card:hover {
+  background: #ffffff;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.expert-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.expert-info {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.expert-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  color: #274C5B;
+  margin: 0;
+}
+
+.expert-role {
+  font-family: 'Yellowtail', cursive;
+  font-size: 22px;
+  color: #7EB693;
+  margin: 5px 0 0;
+}
+
+.expert-socials {
+  display: flex;
+  gap: 15px;
+  color: #274C5B;
+  font-size: 20px;
+}
+
+.expert-socials svg {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.expert-socials svg:hover {
+  color: #7EB693;
+}
+
+/* --- АДАПТИВНОСТЬ --- */
+
+@media (max-width: 1024px) {
+  .experts {
+      font-size: 40px;
   }
-  
-  .expert-img {
-    background: #eeeeee;
-    padding: 20px;
-    border-radius: 18px;
-    width: 400px;
-    text-align: center;
-    transition: 0.35s ease;
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
+  .expert-card {
+      max-width: 45%; 
   }
-  
-  .expert-img img {
-    width: 100%;
-    border-radius: 14px;
-    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .experts {
+      font-size: 32px;
   }
-  
-  .expert-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+  .dummy-ab {
+      font-size: 16px;
   }
-  
-  .expert-img h4 {
-    font-family: 'Roboto';
-    margin-top: 10px;
-    font-size: 25px;
-    color: #274C5B;
+  .expert-card {
+      max-width: 100%; 
   }
-  
-  .expert-img p {
-    font-family: 'Yellowtail';
-    font-size: 22px;
-    color: #7EB693;
-    margin-top: 5px;
+  .expert-info {
+      padding: 20px;
   }
-  
+}

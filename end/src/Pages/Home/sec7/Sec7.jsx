@@ -8,8 +8,7 @@ import { BsPersonFill } from "react-icons/bs";
 function Sec7() {
     return (
         <div className='sec7-parent'>
-            <div className="container sect7-content">
-                <div className="news-header">
+             <div className="news-header">
                     <div className="news-titles">
                         <h3 className='news-tag'>News</h3>
                         <h1 className='news-main-title'>
@@ -17,10 +16,10 @@ function Sec7() {
                             organic food, & more
                         </h1>
                     </div>
-                    <button className='more-news-btn'>
-                        <Link to='/News'>More News 🡆</Link>
-                    </button>
+                    {/* <Link to='/News' className='more-news-btn'>More News 🡆</Link> */}
                 </div>
+            <div className="container sect7-content">
+               
 
                 <div className="news-grid">
                     <div className="news-card">
@@ -28,17 +27,16 @@ function Sec7() {
                             <img className='news-img' src={leavnews} alt="Leaves" />
                         </div>
                         <div className="news-info-block">
+                            <span className='news-date'>25 Nov</span>
                             <div className="profile">
                                 <BsPersonFill />
                                 <span className='author-name'>By Rachi Card</span>
                             </div>
-                            <h2 className='news-card-title'>Everything You Need to Know Organik</h2>
+                            <h2 className='news-card-title'>The Benefits of Vitamin D</h2>
                             <p className='news-card-text'>
-                                Organic farming is the only way that you still experience the real world.
+                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum
                             </p>
-                            <button className='load-more-btn'>
-                                <Link to='/NewsandBlog3'>Load More 🡆</Link>
-                            </button>
+                            <Link to='/NewsandBlog3' className='read-more-btn'>Read More 🡆</Link>
                         </div>
                     </div>
 
@@ -47,17 +45,16 @@ function Sec7() {
                             <img className='news-img' src={tomatnews} alt="Tomatoes" />
                         </div>
                         <div className="news-info-block">
+                            <span className='news-date'>25 Nov</span>
                             <div className="profile">
                                 <BsPersonFill />
                                 <span className='author-name'>By Rachi Card</span>
                             </div>
-                            <h2 className='news-card-title'>Organic: Surprising Benefits Facts</h2>
+                            <h2 className='news-card-title'>Our Favourite Summertime Tommeto</h2>
                             <p className='news-card-text'>
-                                The world of nature has grown on the principles of health, ecology, and care.
+                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum
                             </p>
-                            <button className='load-more-btn'>
-                                <Link to='/NewsandBlog4'>Load More 🡆</Link>
-                            </button>
+                            <Link to='/NewsandBlog4' className='read-more-btn'>Read More 🡆</Link>
                         </div>
                     </div>
                 </div>

@@ -1,11 +1,69 @@
-.cont-head{
-    max-width: 1521px;
+.contact-banner-container {
+    width: 100%;
+    overflow: hidden;
 }
-.cont-text{
-    font-family: 'Roboto';
+
+.contact-banner-wrapper {
+    position: relative; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-banner-img {
+    width: 100%;
+    max-width: 1920px; 
+    height: 450px;    
+    object-fit: cover; 
+    display: block;
+}
+
+.contact-banner-overlay {
+    position: absolute; 
+    inset: 0;          
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-banner-title {
+    font-family: 'Roboto', sans-serif;
     font-size: 50px;
     font-weight: 800;
-    color: #274C5B;
-    margin-left: 605px;
-    margin-top: -220px;
+    color: #274C5B; 
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* --- АДАПТИВНОСТЬ --- */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+    .contact-banner-img {
+        height: 350px;
+    }
+    .contact-banner-title {
+        font-size: 40px;
+    }
+}
+
+/* Мобильные телефоны */
+@media (max-width: 768px) {
+    .contact-banner-img {
+        height: 250px;
+    }
+    .contact-banner-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-banner-img {
+        height: 180px;
+    }
+    .contact-banner-title {
+        font-size: 26px;
+    }
 }

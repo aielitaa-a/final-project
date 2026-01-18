@@ -1,152 +1,168 @@
-.about2{
-    margin-top: 200px;
-    background-color: #F9F8F8;
-    height: 1000px;
+.about2 {
+  margin-top: 100px;
+  background-color: #F9F8F8;
+  padding: 100px 0;
 }
-.why-abo{
-    font-family: 'Yellowtail';
-    font-weight: 400;
-    color: #7EB693;
-    font-size: 35px;
-    padding-top: 100px;
-    padding-left: 200px;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-.not-buy{
-    font-family: 'Roboto';
-    font-weight: 800;
-    font-size: 50px;
-    color: #274C5B;
-    margin-top: -430px;
-    margin-left: 200px;
+
+.abo2-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
 }
-.dummy-abo{
-    color: #525C60;
-    font-weight: 400;
-    font-size: 18px;
-    font-family: sans-serif;
-    padding-left: 205px;
-    padding-top: 20px;
+
+.abo2-content {
+  flex: 1;
 }
-.green-about{
-    width: 500px;
-    height: 470px;
-    border-radius: 20px;
-    margin-left: 900px;
-    margin-top: -35px;
+
+.abo2-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
-.block1-abo{
-    display: flex;
-    color: #7EB693;
-    margin-top: 50px;
-    width: 300px;
-    height: 60px;
-    background-color:#ECECEC;
-    border-radius: 45px;
-    padding-top: 20px;
-    padding-left: 20px;
-    margin-left: 200px;
+
+.green-about {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
 }
-.natural-abo{
-    color: #274C5B;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: 'Roboto';
-    margin-left: 5px;
-    margin-top: -3px;
+
+.why-abo {
+  font-family: 'Yellowtail', cursive;
+  color: #7EB693;
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-left: 20px;
 }
-.p-abo{
-    color: #525C60;
-    font-weight: 500;
-    font-family: sans-serif;
-    font-size: 18px;
-    padding-left: 300px;
-    margin-top: 30px;
+
+.not-buy {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  font-size: 45px;
+  color: #274C5B;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  margin-top: 30px;
+  margin-left: 20px;
 }
-.block2-abo{
-    display: flex;
-    color: #7EB693;
-    margin-top: 50px;
-    width: 300px;
-    height: 60px;
-    background-color:#ECECEC;
-    border-radius: 45px;
-    padding-top: 20px;
-    padding-left: 20px;
-    margin-left: 200px;
+
+.dummy-abo {
+  color: #525C60;
+  font-size: 18px;
+  font-family: sans-serif;
+  margin-bottom: 35px;
 }
-.increases{
-    color: #274C5B;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: 'Roboto';
-    margin-left: 5px;
-    margin-top: -3px;
+
+.benefit-item {
+  margin-bottom: 25px;
 }
-.filling{
-    color: #525C60;
-    font-weight: 500;
-    font-family: sans-serif;
-    font-size: 18px;
-    padding-left: 300px;
-    margin-top: 30px;
+
+.benefit-capsule {
+  display: flex;
+  align-items: center;
+  background-color: #ECECEC;
+  border-radius: 50px;
+  padding: 15px 25px;
+  width: fit-content;
+  gap: 10px;
 }
+
+.circle-icon {
+  color: #7EB693;
+  font-size: 20px;
+}
+
+.natural-abo, .increases {
+  color: #274C5B;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.benefit-desc {
+  color: #525C60;
+  font-size: 16px;
+  padding-left: 55px;
+  margin-top: 10px;
+}
+
+/* Сетка из 4-х карточек */
 .four-block {
-    display: flex;
-    margin-left: 200px;
-    gap: 55px;                       
-    margin-top: 40px;
-  }
-  
-  .block-one {
-    background: #fff;
-    border-radius: 16px;
-    padding-top: 30px;
-    padding-left: 10px;
-    width: 250px; 
-    height: 250px;                   
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
-  }
-  
-  .block-one:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-  }
-  
-  .block-one svg {
-    font-size: 40px;
-    color: #7EB693; 
-    margin-left: 95px;
-    margin-bottom: 20px;
-  }
-  
-  .Policy{
-    font-size: 22px;
-    color: #274C5B;   
-  }
-  .hundr{
-    font-size: 22px;
-    color: #274C5B;  
-    margin-left: 55px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
+
+.block-one {
+  background: #fff;
+  border-radius: 25px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: 0.3s;
+}
+
+.block-one:hover {
+  transform: translateY(-10px);
+}
+
+.block-one svg {
+  font-size: 45px;
+  color: #7EB693;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 22px;
+  color: #274C5B;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 15px;
+}
+
+.industry {
+  color: #525C60;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* --- АДАПТИВНОСТЬ --- */
+
+@media (max-width: 1024px) {
+  .abo2-main {
+      flex-direction: column-reverse; /* Картинка сверху или снизу по желанию */
+      text-align: center;
+  }
   
-  .Support{
-    font-size: 22px;
-    color: #274C5B; 
-    margin-left: 50px;  
+  .abo2-image {
+      justify-content: center;
   }
 
-  .Payment{
-    font-size: 22px;
-    color: #274C5B;   
-    margin-left: 25px;
+  .benefit-capsule {
+      margin: 0 auto;
   }
-  .industry {
-    text-align: center;
-    color: #525C60;
-    font-size: 15px;
-    line-height: 22px;
-    padding-left: -40px;
-    padding-top:15px;
+
+  .benefit-desc {
+      padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .not-buy {
+      font-size: 32px;
   }
   
+  .about2 {
+      padding: 50px 0;
+  }
+}

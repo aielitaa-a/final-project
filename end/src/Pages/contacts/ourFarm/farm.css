@@ -1,107 +1,116 @@
 .farm-section {
     width: 100%;
-    max-width: 1200px; 
-    margin: 50px auto; 
-    min-height: 500px;
-    background-image: url('../../../assets/contleav.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 30px; 
-    display: flex;
-    align-items: center; 
-    padding: 40px;
+    padding: 100px 50px; 
+    box-sizing: border-box;
 }
 
 .farm-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 550px;
+    background-image: url('../../../assets/contleav.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px; 
     display: flex;
+    align-items: center; 
     justify-content: flex-end; 
-    width: 100%;
+    padding: 60px;
+    box-sizing: border-box;
 }
 
 .loc-card {
     background-color: #ffffff;
     width: 100%;
-    max-width: 450px;
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 480px;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
 .loc {
     font-family: 'Yellowtail', cursive;
-    font-weight: 400;
     font-size: 32px;
-    color: #7EB693;
-    margin-bottom: 5px;
-    margin-left: 9px;
+    color: #7EB693; 
+    margin: 0 0 10px 0;
 }
 
 .our-farms {
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     color: #274C5B;
-    font-size: 40px;
-    margin-bottom: 15px;
-    margin-left: 5px;
+    font-size: 45px;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
 }
 
 .established-text {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #525C60;
-    line-height: 1.5;
-    margin-bottom: 25px;
-    padding-left: 10px;
+    line-height: 1.6;
+    margin-bottom: 35px;
 }
 
 .location-item {
     display: flex;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     align-items: flex-start;
 }
 
 .loc-icon-bg {
     color: #7EB693;
-    font-size: 28px;
-    padding-top: 3px;
+    font-size: 24px;
+    padding-top: 4px;
 }
 
 .loc-text h4 {
     color: #274C5B;
     font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 2px;
+    font-weight: 800;
+    margin: 0 0 5px 0;
 }
 
 .loc-text p {
     color: #525C60;
-    font-size: 15px;
+    font-size: 16px;
+    margin: 0;
 }
 
-@media (max-width: 992px) {
-    .farm-section {
-        margin: 20px;
-        background-position: left center;
-    }
-    
+/* --- АДАПТИВНОСТЬ --- */
+
+@media (max-width: 1024px) {
     .farm-container {
         justify-content: center; 
+        padding: 40px;
+    }
+    .farm-section {
+        padding: 50px 20px;
     }
 }
 
-@media (max-width: 500px) {
-    .farm-section {
-        background-image: none; 
-        background-color: #f1f8f4;
-        padding: 20px;
+@media (max-width: 768px) {
+    .farm-container {
+        border-radius: 20px;
+        min-height: auto;
+        padding: 30px 15px;
     }
-    
     .loc-card {
-        padding: 25px;
+        padding: 30px 20px;
+        max-width: 100%;
     }
-    
     .our-farms {
-        font-size: 30px;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .farm-container {
+        background-image: none; 
+        background-color: #F1F8F4;
+    }
+    .loc-card {
+        box-shadow: none;
     }
 }

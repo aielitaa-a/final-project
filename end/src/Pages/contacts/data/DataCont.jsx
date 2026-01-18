@@ -20,21 +20,21 @@ function DataCont() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .send(
-        "service_6qj3e2v",     
-        "template_knp2bfs",   
+        "service_6qj3e2v",
+        "template_knp2bfs",
         {
           name: formData.name,
           email: formData.account,
           message: formData.message,
         },
-        "B4SKKEWnt29Bjz5c0"  
+        "B4SKKEWnt29Bjz5c0"
       )
       .then(() => {
         alert("Сообщение успешно отправлено!");
         setFormData({ name: "", account: "", message: "" });
+        setActive(null);
       })
       .catch((err) => {
         console.error(err);
@@ -43,60 +43,64 @@ function DataCont() {
   };
 
   return (
-    <div className="data-container">
-      <div className="all-data">
-        <div className="cont-fruit">
-          <img className="fruit-cont" src={fruit} alt="" />
+    <div className="data-wrapper">
+      <div className="data-content-row">
+
+        <div className="fruit-image-container">
+          <img className="fruit-cont-img" src={fruit} alt="Fruit" />
         </div>
 
-        <div className="text-data">
-          <h1 className="we-love">We'd love to talk...</h1>
-          <p className="simply-cont">Simply dummy text...</p>
 
-          <div className="contact-block" onClick={() => setActive("gmail")}>
-            <h3 className="phone-mail">Gmail</h3>
-            <p className="conts-data">aielitaalmaz@gmail.com</p>
-          </div>
+        <div className="text-data-container">
+          <h1 className="we-love-title">We'd love to talk...</h1>
+          <p className="simply-cont-text">Simply dummy text...</p>
 
-          <div className="contact-block" onClick={() => setActive("phone")}>
-            <h3 className="phone-mail">Phone</h3>
-            <p className="conts-data">+996 0702 60 4660</p>
+          <div className={`contact-info-card ${active === 'gmail' ? 'active-card' : ''}`} onClick={() => setActive("gmail")}>
+            <h3 className="phone-mail-label">Gmail</h3>
+            <p className="conts-data-email">aielitaalmaz@gmail.com</p>
           </div>
         </div>
       </div>
 
+
       {active && (
-        <form className="form-box" onSubmit={sendEmail}>
-          <h2>{active === "gmail" ? "Write to Gmail" : "Write to Phone"}</h2>
+        <div className="form-animation-wrapper">
+          <form className="form-box-styled" onSubmit={sendEmail}>
+            <div className="form-header">
+               <h2>{active === "gmail" ? "Write to Gmail" : "Write to Phone"}</h2>
+               <button type="button" className="close-form" onClick={() => setActive(null)}>×</button>
+            </div>
 
-          <input
-            type="text"
-            placeholder="Your Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+            <div className="input-group">
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="account"
+                value={formData.account}
+                onChange={handleChange}
+                required
+              />
+            </div>
 
-          <input
-            type="text"
-            placeholder="Your Email"
-            name="account"
-            value={formData.account}
-            onChange={handleChange}
-            required
-          />
+            <textarea
+              placeholder="Your Message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
 
-          <textarea
-            placeholder="Your Message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-
-          <button type="submit">Send</button>
-        </form>
+            <button className="submit-form-btn" type="submit">Send Message</button>
+          </form>
+        </div>
       )}
     </div>
   );
