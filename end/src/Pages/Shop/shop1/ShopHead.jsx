@@ -97,7 +97,7 @@ function ShopHead() {
 
       <div className="shop-banner">
         <img src={shopimg} alt="banner" className="banner-bg" />
-        <h1 className="banner-title">{searchQuery ? `"${searchQuery}"` : "Shop"}</h1>
+        <h1 className="banner-title">{searchQuery ? `"${searchQuery}"` : "SHOP"}</h1>
       </div>
 
       <div className="shop-container">

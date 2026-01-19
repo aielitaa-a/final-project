@@ -1,3 +1,4 @@
+/* Общие настройки */
 .header-parent {
   width: 100%;
   background: #ffffff;
@@ -11,20 +12,16 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: space-between;
   padding: 0 15px;
-  position: relative;
-
 }
-
 
 .logos {
   display: flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
-
 }
 
 .logo-img {
@@ -40,43 +37,48 @@
   margin: 0;
 }
 
-
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: #274C5B;
-  cursor: pointer;
-  order: 2;
-
-}
-
 .nav {
   display: flex;
-  align-items: center;
+  align-items: center; 
   gap: 35px;
 }
 
-.nav a,
+.nav-link,
 .dropdown-btn {
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #274C5B;
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
-
 
 .dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-btn {
+  gap: 5px; 
+  line-height: 1; /* Чтобы высота строки не раздувала кнопку */
+}
+
+.arrow {
+  font-size: 14px;
+  display: inline-block;
+  transform: translateY(1px); 
 }
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 150%;
   left: 0;
   background: #ffffff;
   min-width: 180px;
@@ -89,6 +91,12 @@
   z-index: 100;
 }
 
+.dropdown-menu a {
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #274C5B;
+  font-weight: 600;
+}
 
 .header-actions {
   display: flex;
@@ -108,7 +116,6 @@
   font-weight: 600;
   height: 54px;
   box-sizing: border-box;
-  background: #fff;
 }
 
 .search-wrapper {
@@ -138,31 +145,26 @@
   font-size: 20px;
 }
 
-.navy-bg {
-  background: #274C5B;
+.navy-bg { background: #274C5B; }
+.green-bg { background: #7EB693; }
+
+/* Адаптивность */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #274C5B;
+  cursor: pointer;
 }
-
-.green-bg {
-  background: #7EB693;
-}
-
-
 
 @media (max-width: 1024px) {
-  .nav {
-    gap: 15px;
-  }
-
-  .search-input {
-    width: 80px;
-  }
+  .nav { gap: 15px; }
+  .search-input { width: 80px; }
 }
 
 @media (max-width: 850px) {
-  .menu-toggle {
-    display: block;
-  }
-
+  .menu-toggle { display: block; order: 2; }
   .nav {
     display: none;
     flex-direction: column;
@@ -175,20 +177,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     align-items: flex-start;
   }
-
-  .nav.active {
-    display: flex;
-  }
-
-  .action-text {
-    display: none;
-  }
-
-  .action-item-wrapper {
-    padding-right: 5px;
-  }
-
-  .search-wrapper {
-    display: none;
-  }
+  .nav.active { display: flex; }
+  .action-text { display: none; }
+  .search-wrapper { display: none; }
 }

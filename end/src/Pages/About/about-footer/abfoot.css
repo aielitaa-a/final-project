@@ -161,3 +161,74 @@
     padding-right: 175px;
     text-align: right;
 }
+/* --- Адаптивная верстка --- */
+
+@media (max-width: 1400px) {
+    .img8 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hope {
+        font-size: 30px;
+        margin-top: -120px;
+        padding: 0 20px;
+    }
+
+    .foott88 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact8, .Utility-Pages, .email, .phonee, .adresss, .foot-logo-img, .logo-foot, .ul-foot, .dummy-foot {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center !important;
+        padding-right: 0 !important;
+    }
+
+    .ul-foot {
+        margin-top: 20px;
+        line-height: 2.5;
+    }
+
+    .dummy-foot {
+        margin-top: 40px;
+    }
+
+    .foot-logo-img {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer8 {
+        margin-top: 50px;
+    }
+
+    .img8 {
+        margin-top: 50px;
+        height: 250px; 
+        object-fit: cover;
+    }
+
+    .hope {
+        font-size: 22px;
+        margin-top: -160px; 
+    }
+
+    .contact8, .Utility-Pages {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+
+    .logo-foot {
+        margin-top: 10px;
+    }
+}

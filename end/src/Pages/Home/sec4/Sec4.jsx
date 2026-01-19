@@ -7,17 +7,18 @@ function Sec4() {
   return (
     <div className='sec4-wrapper'>
       <section className="testimonial-section">
+        <h2 className='testimonial-label'>Testimonial</h2>
+        <h1 className='main-title'>What Our Customer Saying?</h1>
         <div className="container testimonial-container">
-          <h2 className='testimonial-label'>Testimonial</h2>
-          <h1 className='main-title'>What Our Customer Saying?</h1>
-          
+
+
           <div className="profile-block">
             <img className='saras-ava' src={sara} alt="" />
             <div className="stars">
               <TiStarFullOutline /><TiStarFullOutline /><TiStarFullOutline /><TiStarFullOutline /><TiStarFullOutline />
             </div>
             <p className='testimonial-text'>
-              Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy 
+              Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy
               text of the printing and typesetting industry. Lorem Ipsum has been.
             </p>
             <h3 className='author-name'>Sara Taylor</h3>

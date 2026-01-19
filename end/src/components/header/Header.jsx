@@ -44,7 +44,6 @@ function Header() {
     <header className="header-parent">
       <div className="container header-container">
         
-        {/* Логотип */}
         <Link to="/" className="logos">
           <img className="logo-img" src={logo} alt="logo" />
           <h1 className="logo-text">Organic</h1>
@@ -55,12 +54,12 @@ function Header() {
         </button>
 
         <nav className={`nav ${isMenuOpen ? "active" : ""}`}>
-          <Link to="/" onClick={closeMenu}>Home</Link>
-          <Link to="/about" onClick={closeMenu}>About</Link>
+          <Link to="/" className="nav-link" onClick={closeMenu}>Home</Link>
+          <Link to="/about" className="nav-link" onClick={closeMenu}>About</Link>
 
           <div className="dropdown">
             <button className="dropdown-btn" onClick={() => setIsPagesOpen(!isPagesOpen)}>
-              Pages ▾
+              Pages <span className="arrow">▾</span>
             </button>
             {isPagesOpen && (
               <div className="dropdown-menu">
@@ -71,9 +70,9 @@ function Header() {
             )}
           </div>
 
-          <Link to="/shop" onClick={closeMenu}>Shop</Link>
-          <Link to="/news" onClick={closeMenu}>News</Link>
-          <Link to="/contacts" onClick={closeMenu}>Contact</Link>
+          <Link to="/shop" className="nav-link" onClick={closeMenu}>Shop</Link>
+          <Link to="/news" className="nav-link" onClick={closeMenu}>News</Link>
+          <Link to="/contacts" className="nav-link" onClick={closeMenu}>Contact</Link>
         </nav>
 
         <div className="header-actions">
